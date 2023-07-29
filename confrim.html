@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/SchemeLogo2.png">
+    <title>BHIS - Bayelsa Health Insurance Scheme</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/plugins/feather/feather.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+     
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="enrollee-dsh.html" class="logo">
+					<img src="assets/img/SchemeLogo2.png" width="35" height="35" alt=""> <span style="padding-right: 9px;">B H I M S</span>
+					<img style="float: right;" src="assets/img/StateLogoB.png" width="34" height="34" alt="">
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg"  alt=""></a>
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg"  alt=""></a>
+			<div class="top-nav-search mob-view">
+				<form>
+					<input type="text" class="form-control" placeholder="Search here">
+					<a class="btn" ><img src="assets/img/icons/search-normal.svg" alt=""></a>
+				</form>
+			</div>
+            <ul class="nav user-menu float-end">
+                <li class="nav-item dropdown d-none d-sm-block">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown"><img src="assets/img/icons/note-icon-02.svg" alt=""><span class="pulse"></span> </a>
+                    <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header">
+                            <span>Notifications</span>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown d-none d-sm-block">
+                    <a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><img src="assets/img/icons/note-icon-01.svg" alt=""><span class="pulse"></span> </a>
+                </li>
+				<li class="nav-item dropdown has-arrow user-profile-list">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+						<div class="user-names">
+							<span id="user-email"></span>
+                        	
+						</div>
+						<span class="user-img">
+							<img  src="assets/img/user-06.jpg"  alt="Admin">
+						</span>
+                    </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="">Edit Profile</a>
+						<a class="dropdown-item" href="">Settings</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+                </li>
+				<li class="nav-item ">
+                    <a href="settings.html"  class="hasnotifications nav-link"><img src="assets/img/icons/setting-icon-01.svg" alt=""> </a>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-end">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="">My Profile</a>
+                    <a class="dropdown-item" href="">Edit Profile</a>
+                    <a class="dropdown-item" href="">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-01.svg" alt=""></span> <span> Dashboard </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a  href="">Statistics</a></li>
+								<li><a  href="">Waiting Messages</a></li>
+							    <li><a  href="">Premium</a></li>
+							    <li><a  href="">My Status</a></li>
+							    <li><a  href="">My Insurance Card</a></li>
+							    <li><a  href="">Family History</a></li>
+
+
+
+
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>New Registration </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+                                <li><a href="new-reg.html">New Enrollement</a></li>
+
+								<li><a href="">Edit Enrollement</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-03.svg" alt=""></span> <span>Medical Services </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="">Call Manager</a></li>
+								<li><a href="">Refferal Manager</a></li>
+								<li><a href="">Claim Manager</a></li>
+								<li><a href="">Claims Vetting</a></li>
+								<li><a href="">Enrollee Encounter</a></li>
+							</ul>
+						</li>
+						
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-07.svg" alt=""></span> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="">Payments</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-09.svg" alt=""></span> <span> Payments </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+							</ul>
+						</li>
+                        
+                        <li>
+                            <a href=""><span class="menu-side"><img src="assets/img/icons/menu-icon-16.svg" alt=""></span> <span>Settings</span></a>
+                        </li>
+                        
+					<div class="logout-btn">
+						<a href="login.html"><span class="menu-side"><img src="assets/img/icons/logout.svg" alt=""></span> <span>Logout</span></a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <!-- Page Header -->
+				<div class="page-header">
+					<div class="row">
+						<div class="col-sm-12">
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard </a></li>
+								<li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+								<li class="breadcrumb-item active">Confirm Information/li>
+							</ul>
+						</div>
+					</div>
+                    
+				</div>
+				<!-- /Page Header -->
+            <div id="step-1">
+            <form id="enrollee">
+                    <div class="card-box">
+                        <h3 class="card-title">Basic Informations</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="profile-img-wrap">
+                                    <img class="inline-block" src="assets/img/user.jpg" alt="user">
+                                    <div class="fileupload btn">
+                                        <span class="btn-text">edit</span>
+                                        <input class="upload" type="file">
+                                    </div>
+                                </div>
+                                <div class="profile-basic">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div>
+                                            	<label>Title:</label>
+                                            	<div>
+                                            		<span id="title1Display" style="color: blue;"></span>
+                                            	</div>
+
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div >
+                                                <label >First Name:</label>
+                                                <p id="firstnameDisplay1"style="color: blue;"></p>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label>Middle Name</label>
+                                                <p id="middlenameDisplay1"style="color: blue;"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label>Last Name:</label>
+                                                <p id="lastnameDisplay1"style="color: blue;"></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label>Birth Date</label>
+                                                <div class="cal-icon">
+                                                    <p id="dobDisplay1"style="color: blue;"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+												<label>Gender</label>
+                                                <p id="genderDisplay1" style="color: blue;"></p>
+
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Marital Status<span class="login-danger">*</span></label>
+                                                <p id="maritalstatusDisplay1" style="color: blue;"></p>
+
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                           
+												<label class="focus-label">Blood Group<span class="login-danger"></span></label>
+                                                <p id="bloodgroupDisplay1" style="color: blue;"></p>
+											
+                                        </div>
+                                        <div class="col-md-6">
+                                           
+												<label class="focus-label">Enrollment Type<span class="login-danger"></span></label>
+                                                <p id="enroltypeDisplay1" style="color: blue;"></p>
+
+											
+                                        </div>
+                                        <div class="col-md-6">                                          
+												<label class="focus-label">Insurance ID<span class="login-danger"></span></label>
+                                                <p id="insureidDisplay1" style="color: blue;"></p>
+                                        </div>
+                                        <div class="col-md-6">                                           
+												<label class="focus-label">Insurance Type<span class="login-danger"></span></label>
+                                                <p id="insuretypeDisplay1" style="color: blue;"></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                         
+                                                <label class="focus-label">Family</label>
+                                                <p id="familyDisplay1" style="color: blue;"></p>
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                            
+                                                <label class="focus-label">Sponsor</label>
+                                                <p id="sponsorDisplay1" style="color: blue;" ></p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box" id="about-cont">
+                        <h3 class="card-title">Contact Informations</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <label>Residential Address</label>
+                                    <p id="residentialaddressDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Permanent Address</label>
+                                    <p id="permanentaddressDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label class="focus-label">Weight</label>
+                                    <p id="weightDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Height</label>
+                                    <p id="heightDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Eye Colour</label>
+                                    <p id="eyecolorDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Hair Colour</label>
+                                    <p id="haircolorDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Phone Number</label>
+                                    <p id="phoneDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Physical Condition</label>
+                                    <p id="physicalconditionDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box" >
+                        <h3 class="card-title">Parental Informations</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Maiden Name</label>
+                                    <p id="maidenameDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Mother's Maiden Name</label>
+                                    <p id="mothersmaidenameDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Father's Name</label>
+                                    <p id="fathersnameDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div >
+                                    <label>Termination Date</label>
+									<div>
+                                        <p id="terminationdateDisplay1"style="color: blue;"></p>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title">Employment Informations</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>MDA/Employer</label>
+                                    <p id="employerDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Department</label>
+                                    <p id="departmentDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Designation</label>
+                                    <p id="designationDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Posting LGA</label>
+                                    <p id="postinglgaDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Posting Town</label>
+                                    <p id="postingtownDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Grade Level</label>
+                                    <p id="gradelevelDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Step</label>
+                                    <p id="stepDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>First Appointment Date</label>
+									<div>
+                                        <p id="firstappointmentdateDisplay1"style="color: blue;"></p>
+									</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center m-t-20" style="float: right;">
+                        <button class="btn btn-primary submit-btn" type="button" id="next-button">Next</button>
+                    </div>
+                
+                </div>
+               <div id="step-2" style="display:none;">
+                    <div class="card-box">
+                        <h3 class="card-title">Health Care Provider Data</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <label>Health Care Provider</label>
+                                    <p id="healthcareproviderDisplay1" style="color: blue;"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Wards</label>
+                                <p id="wardDisplay1" style="color: blue;"></p>
+                            </div>
+                            <div class="col-md-6">
+                                
+                                    <label class="focus-label">Provider Code</label>
+                                    <p id="providercodeDisplay1" style="color: blue;"></p>
+                            
+                            </div>
+                            <div class="col-md-6">
+                                
+                                    <label class="focus-label">Provider Name</label>
+                                    <p id="providernameDisplay1" style="color: blue;"></p>
+                            
+                            </div>
+                            <div class="col-md-6">
+                                
+                                    <label class="focus-label">Provider Address</label>
+                                    <p id="provideraddressDisplay1" style="color: blue;"></p>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title">Next Of Kin Information</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Full Name</label>
+                                    <p id="fullnameDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Address</label>
+                                    <p id="addressDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Relationship</label>
+                                    <p id="relationshipDisplay1"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Phone No</span></label>
+                                    <p id="nokphoneDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card-box" >
+                        <h3 class="card-title">Origin Information</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Country of Origin</label>
+                                    <p id="countryDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>State of Origin</label>
+                                    <p id="stateDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>LGA of Origin</label>
+                                    <p id="lgaDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Nationality</label>
+                                    <p id="nationalitiesDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Home Town</label>
+                                    <p id="hometownDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Place of Birth</label>
+                                    <p id="placeofbirthDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title">Identification</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Identity Type</label>
+                                    <p id="idtypeDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Idenity No</label>
+                                    <p id="idnoDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Expiry Date</label>
+									<div>
+                                        <p id="expirydateDisplay1"style="color: blue;"></p>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box"  >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Principal ID</label>
+                                    <p id="principalidDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Title</label>
+                                    <p id="deptitleDisplay1"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Surname</label>
+                                    <p id="depsurname"style="color: blue;"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Other Names</label>
+                                    <div class="cal-icon">
+                                        <p id="depothernamesDisplay1"style="color: blue;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>sex</label>
+                                    <p id="sexDisplay1"style="color: blue;"></p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label>Date of Birth</label>
+                                    <div>
+                                        <p id="dob2Display1"style="color: blue;"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table Header -->
+                <div class="card-box"  >  
+                    <div class="page-table-header mb-2">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="doctor-table-blk">
+                                    <h3>Add Dependant</h3>
+                                    <div class="doctor-search-blk">
+                                        
+                                        <div class="add-group">
+                                            <a  class="btn btn-primary add-pluss ms-2" onclick="addFormRow()"><img src="assets/img/icons/plus.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Table Header -->
+                 <!--   <div class="staff-search-table">
+                        <form>
+                            <div class="row" id="formContainer">
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Dependant Type</label>
+                                        <select class="form-control select" >
+                                            <option>Select Dependant Type</option>
+                                            <option>Spouse</option>
+                                            <option>Child1</option>
+                                            <option>Child3</option>
+                                            <option>Child4</option>
+                                            <option>Child5</option>
+                                            <option>Child6</option>
+                                            <option>Child7</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Title</label>
+                                        <select class="form-control select" >
+                                            <option>MR.</option>
+                                            <option>MRS.</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >From </label>
+                                        <input class="form-control floating" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >To </label>
+                                        <input class="form-control floating" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Payment Status </label>
+                                        
+                                    </div>
+                                </div>
+                            </div>     
+                    </div>-->
+                </div>
+                <div class="modal custom-modal" id="errorModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <p id="errorModalMessage"></p>
+                          <span style="font-size: small; font-weight: lighter; color: black;">Click anywhere on the screen to exit</span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <style>
+                    /* Customize the modal height */
+                    .custom-modal .modal-dialog  {
+                    height: 200vh;
+                    }
+                  
+                    /* Customize the modal width */
+                    .modal-content {
+                      width: 250px; /* Adjust the value as needed */
+                    }
+                  
+                    /* Customize the modal text color */
+                    .modal-body,
+                    .modal-title {
+                      font-size: large;  
+                      font-weight: bold;
+                      color: rgb(252, 3, 36); /* Set your desired text color */
+                    }
+                  </style>
+                  
+  
+                <div class="form-group login-btn">
+                    <button class="btn btn-primary btn-block" type="submit" id="savebtn">
+                        <span id="savebtnText">submit</span>
+                        <span id="loader" style="display: none;">Loading...</span>
+                      </button>
+                </div>
+                    <div class="text-center m-t-20" style="float: right;">
+                        <button class="btn btn-primary submit-btn" type="button" id="previous-button">previous</button>
+                    </div>
+           </form>
+            </div>
+            <div class="notification-box">
+                <div class="msg-sidebar notifications msg-noti">
+                    <div class="topnav-dropdown-header">
+                        <span>Messages</span>
+                    </div>
+                    <div class="drop-scroll msg-list-scroll" id="msg_list">
+                        <ul class="list-box">
+                            <li>
+                                <a href="chat.html">
+                                    <div class="list-item">
+                                        <div class="list-left">
+                                            <span class="avatar">R</span>
+                                        </div>
+                                        <div class="list-body">
+                                            <span class="message-author">Richard Miles </span>
+                                            <span class="message-time">12:28 AM</span>
+                                            <div class="clearfix"></div>
+                                            <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+     <script>
+	// Check if there is a stored user email
+    if(localStorage.getItem("email")) {
+  // If there is, display the email address in the span element
+   const userEmail = localStorage.getItem("email");
+   document.getElementById('user-email').innerText = userEmail;
+}
+
+ </script>
+
+
+<script>
+    // Array of countries
+    var countries = [
+      "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia",
+      "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin",
+      "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+      "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia",
+      "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica",
+      "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia",
+      "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece",
+      "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India",
+      "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
+      "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho",
+      "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali",
+      "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia",
+      "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand",
+      "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea",
+      "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis",
+      "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+      "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
+      "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+      "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
+      "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
+      "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+    ];
+
+    var states = [
+      "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi",
+      "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos",
+      "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"
+    ];
+
+    const form = document.getElementById('enrollee');
+    const savebtn = document.getElementById('savebtn');
+    const savebtnText = document.getElementById('savebtnText');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Disable the submit button
+        savebtn.disabled = true;
+
+        // Retrieve URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const firstname = urlParams.get('firstname');
+        const lastname = urlParams.get('lastname');
+        const sex = urlParams.get('sex');
+        const dob = urlParams.get('dob');
+        const title = urlParams.get('title');
+        const enrol_type = urlParams.get('enrol_type');
+        const insure_id = urlParams.get('insure_id');
+        const insure_type = urlParams.get('insure_type');
+        const marital_status = urlParams.get('marital_status');
+        const blood_group = urlParams.get('blood_group');
+        const sponsor = urlParams.get('sponsor');
+        const family = urlParams.get('family');
+        const ward_code = urlParams.get('ward_code');
+        const nok_name = urlParams.get('nok_name');
+        const nok_address = urlParams.get('nok_address');
+        const nok_relationship = urlParams.get('nok_relationship');
+        const origin_country = urlParams.get('origin_country');
+        const nok_phone = urlParams.get('nok_phone');
+        const origin_state = urlParams.get('origin_state');
+        const origin_lga = urlParams.get('origin_lga');
+        const birth_place = urlParams.get('birth_place');
+        const nationality = urlParams.get('nationality');
+        const home_town = urlParams.get('home_town');
+        const national_id = urlParams.get('national_id');
+        const identity_no = urlParams.get('identity_no');
+        const identity_expire = urlParams.get('identity_expire');
+        const principal = urlParams.get('principal');
+        const mda_code = urlParams.get('mda_name');
+        const hcp_code = urlParams.get('hcp_name');
+
+
+        // Get the first three letters of origin_country and origin_state
+        const countryCode = origin_country.substring(0, 3);
+        const stateCode = origin_state.substring(0, 2);
+        const lgacode = origin_lga.substring(0, 3);
+        const nationalitycode = nationality.substring(0, 3);
+
+
+        const dobValue = dob; // dob is already the value from the URL parameter
+        // Convert the date format from dd/mm/yyyy to yyyy-mm-dd
+        const parts = dobValue.split('/');
+        const formattedDob = `${parts[2]}-${parts[1]}-${parts[0]}`;
+        // Show the loader and update the button text if savebtnText element exists
+        if (savebtnText) {
+            savebtnText.innerHTML = '<span id="loader">Loading...</span>';
+        }
+
+        const response = await fetch('http://45.35.12.118:9004/new-enrollee', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ firstname, lastname, sex, dob: formattedDob, title, enrol_type, insure_id, insure_type, blood_group, marital_status, sponsor,
+                family, ward_code, nok_name, nok_address, nok_relationship, origin_country: countryCode, nok_phone, mda_code, hcp_code, origin_state: stateCode, origin_lga: lgacode, birth_place, nationality: nationalitycode, home_town,
+                national_id, identity_no, principal })
+        });
+
+        const data = await response.json();
+        console.log(data);
+
+        // Restore the button text if savebtnText element exists
+        if (savebtnText) {
+            savebtnText.innerHTML = 'Submit';
+        }
+
+        // Enable the submit button
+        savebtn.disabled = false;
+
+        if (response.ok) {
+        window.location.href = 'patient-dashboard.html';
+      } else {
+        const errorMessage = data.error;
+        const errorMessageElement = document.getElementById('errorModalMessage');
+        errorMessageElement.textContent = errorMessage;
+        const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+        errorModal.show();
+      }
+
+    });
+ </script>
+
+
+
+    <script>
+        // Get the elements we need
+         const step1 = document.getElementById('step-1');
+         const step2 = document.getElementById('step-2');
+         const nextButton = document.getElementById('next-button');
+         const previousButton = document.getElementById('previous-button');
+         
+         // Add event listeners to the buttons
+         nextButton.addEventListener('click', () => {
+           step1.style.display = 'none';
+           step2.style.display = 'block';
+           window.scrollTo(0, 0); // Scroll to top of the page
+         });
+         
+         previousButton.addEventListener('click', () => {
+           step2.style.display = 'none';
+           step1.style.display = 'block';
+});
+
+    </script>
+
+<script>
+    // Function to add a new form row
+    function addFormRow() {
+      var container = document.getElementById("formContainer");
+      var row = document.createElement("div");
+      row.className = "form-group local-forms";
+      row.innerHTML = `
+      <form>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Payment Status </label>
+                                        <select class="form-control select" >
+                                            <option>Select Payment Status</option>
+                                            <option>Paid</option>
+                                            <option>Un Paid</option>
+                                            <option>Patially Paid</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >From </label>
+                                        <input class="form-control datetimepicker" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >To </label>
+                                        <input class="form-control datetimepicker" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Payment Status </label>
+                                        <select class="form-control select">
+                                            <option>Select Payment Status</option>
+                                            <option>Paid</option>
+                                            <option>Un Paid</option>
+                                            <option>Patially Paid</option>
+                                          </select>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <button type="button" class="remove-row">Remove</button>
+                        </form>
+      `;
+      container.appendChild(row);
+    }
+
+    // Function to remove a form row
+    function removeFormRow(event) {
+      var row = event.target.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+
+<script>
+    // Add event listener to dynamically created "Remove" buttons
+    document.addEventListener("click", function(event) {
+      if (event.target.classList.contains("remove-row")) {
+        removeFormRow(event);
+      }
+    });
+  </script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // Retrieve the form data from the URL parameters
+      var urlParams = new URLSearchParams(window.location.search);
+
+      // Display the form data of Registration Form  on the confirmation page
+      var title1 = document.getElementById('title1Display');
+      title1.textContent = urlParams.get('title');
+
+      var firstnameDisplay1 = document.getElementById('firstnameDisplay1');
+      firstnameDisplay1.textContent = urlParams.get('firstname');
+
+      var middlenameDisplay1 = document.getElementById('middlenameDisplay1');
+      middlenameDisplay1.textContent =  urlParams.get('middlename');
+      var lastnameDisplay1 = document.getElementById('lastnameDisplay1');
+      lastnameDisplay1.textContent = urlParams.get('lastname');
+      var dobDisplay1 = document.getElementById('dobDisplay1');
+      dobDisplay1.textContent = urlParams.get('dob');
+      var genderDisplay1 = document.getElementById('genderDisplay1');
+      genderDisplay1.textContent = urlParams.get('sex');
+      var maritalstatusDisplay1 = document.getElementById('maritalstatusDisplay1');
+      maritalstatusDisplay1.textContent = urlParams.get('marital_status');
+      var bloodgroupDisplay1 = document.getElementById('bloodgroupDisplay1');
+      bloodgroupDisplay1.textContent = urlParams.get('blood_group');
+      var enroltypeDisplay1 = document.getElementById('enroltypeDisplay1');
+      enroltypeDisplay1.textContent = urlParams.get('enrol_type');
+      var insureidDisplay1 = document.getElementById('insureidDisplay1');
+      insureidDisplay1.textContent = urlParams.get('insure_id');
+      var insuretypeDisplay1 = document.getElementById('insuretypeDisplay1');
+      insuretypeDisplay1.textContent = urlParams.get('insure_type');
+      var residentialaddressDisplay1 = document.getElementById('residentialaddressDisplay1');
+      residentialaddressDisplay1.textContent = urlParams.get('residential_address');
+      var permanentaddressDisplay1 = document.getElementById('permanentaddressDisplay1');
+      permanentaddressDisplay1.textContent = urlParams.get('permanent_address');
+      var weightDisplay1 = document.getElementById('weightDisplay1');
+      weightDisplay1.textContent =  urlParams.get('weight_kg');
+      var heightDisplay1 = document.getElementById('heightDisplay1');
+      heightDisplay1.textContent = urlParams.get('height_cm');
+      var eyecolorDisplay1 = document.getElementById('eyecolorDisplay1');
+      eyecolorDisplay1.textContent = urlParams.get('eye_colour');
+      var haircolorDisplay1 = document.getElementById('haircolorDisplay1');
+      haircolorDisplay1.textContent = urlParams.get('hair_colour');
+      var phoneDisplay1 = document.getElementById('phoneDisplay1');
+      phoneDisplay1.textContent =  urlParams.get('phone_no');
+      var physicalconditionDisplay1 = document.getElementById('physicalconditionDisplay1');
+      physicalconditionDisplay1.textContent = urlParams.get('physicalcondition');
+      var maidenameDisplay1 = document.getElementById('maidenameDisplay1');
+      maidenameDisplay1.textContent = urlParams.get('maiden_name');
+      var mothersmaidenameDisplay1 = document.getElementById('mothersmaidenameDisplay1');
+      mothersmaidenameDisplay1.textContent = urlParams.get('mother_maiden_name');
+      var fathersnameDisplay1 = document.getElementById('fathersnameDisplay1');
+      fathersnameDisplay1.textContent = urlParams.get('father_name');
+
+      var terminationdateDisplay1 = document.getElementById('terminationdateDisplay1');
+      terminationdateDisplay1.textContent = urlParams.get('exit_date');
+
+      var employerDisplay1 = document.getElementById('employerDisplay1');
+      employerDisplay1.textContent = urlParams.get('mda_name');
+
+      var departmenttDisplay1 = document.getElementById('departmentDisplay1');
+      departmenttDisplay1.textContent = urlParams.get('department');
+
+      var designationDisplay1 = document.getElementById('designationDisplay1');
+      designationDisplay1.textContent = urlParams.get('designation');
+
+      var postinglgaDisplay1 = document.getElementById('postinglgaDisplay1');
+      postinglgaDisplay1.textContent = urlParams.get('posting_lga');
+
+      var gradelevelDisplay1 = document.getElementById('gradelevelDisplay1');
+      gradelevelDisplay1.textContent = urlParams.get('grade_level');
+
+      var stepDisplay1 = document.getElementById('stepDisplay1');
+      stepDisplay1.textContent = urlParams.get('grade_step');
+
+      var firstappointmentdateDisplay1 = document.getElementById('firstappointmentdateDisplay1');
+      firstappointmentdateDisplay1.textContent = urlParams.get('firstappointmentdate');
+
+      var healthcareproviderDisplay1 = document.getElementById('healthcareproviderDisplay1');
+      healthcareproviderDisplay1.textContent = urlParams.get('hcp_name');
+
+      var providercodeDisplay1 = document.getElementById('providercodeDisplay1');
+      providercodeDisplay1.textContent = urlParams.get('hcp_code');
+
+      var provideraddressDisplay1 = document.getElementById('provideraddressDisplay1');
+      provideraddressDisplay1.textContent = urlParams.get('hcp_address');
+
+      var fullnameDisplay1 = document.getElementById('fullnameDisplay1');
+      fullnameDisplay1.textContent = urlParams.get('nok_name');
+
+      var addressDisplay1 = document.getElementById('addressDisplay1');
+      addressDisplay1.textContent = urlParams.get('nok_address');
+
+      var relationshipDisplay1 = document.getElementById('relationshipDisplay1');
+      relationshipDisplay1.textContent =  urlParams.get('nok_relationship');
+
+      var nokphoneDisplay1 = document.getElementById('nokphoneDisplay1');
+      nokphoneDisplay1.textContent = urlParams.get('nok_phone');
+
+      var countryDisplay1 = document.getElementById('countryDisplay1');
+      countryDisplay1.textContent = urlParams.get('origin_country');
+
+      var countryDisplay1 = document.getElementById('countryDisplay1');
+      countryDisplay1.textContent = urlParams.get('origin_country');
+
+      var stateDisplay1 = document.getElementById('stateDisplay1');
+      stateDisplay1.textContent = urlParams.get('origin_state');
+
+      var lgaDisplay1 = document.getElementById('lgaDisplay1');
+      lgaDisplay1.textContent = urlParams.get('origin_lga');
+
+      var nationalitiesDisplay1 = document.getElementById('nationalitiesDisplay1');
+      nationalitiesDisplay1.textContent = urlParams.get('nationality');
+
+      var hometownDisplay1 = document.getElementById('hometownDisplay1');
+      hometownDisplay1.textContent = urlParams.get('home_town');
+
+      var placeofbirthDisplay1 = document.getElementById('placeofbirthDisplay1');
+      placeofbirthDisplay1.textContent = urlParams.get('placeofbirth');
+
+      var idtypeDisplay1 = document.getElementById('idtypeDisplay1');
+      idtypeDisplay1.textContent =  urlParams.get('identity_type');
+
+      var idnoDisplay1 = document.getElementById('idnoDisplay1');
+      idnoDisplay1.textContent = urlParams.get('identity_no');
+
+      var expirydateDisplay1 = document.getElementById('expirydateDisplay1');
+      expirydateDisplay1.textContent = urlParams.get('identity_expire');
+
+      var principalidDisplay1 = document.getElementById('principalidDisplay1');
+      principalidDisplay1.textContent = urlParams.get('principal');
+
+      var deptitleDisplay1 = document.getElementById('deptitleDisplay1');
+      deptitleDisplay1.textContent = urlParams.get('deptitle');
+
+      var depothernamesDisplay1 = document.getElementById('depothernamesDisplay1');
+      depothernamesDisplay1.textContent = urlParams.get('depothernames');
+
+      var sexDisplay1 = document.getElementById('sexDisplay1');
+      sexDisplay1.textContent = urlParams.get('sex');
+
+      var dob2Display1 = document.getElementById('dob2Display1');
+      dob2Display1.textContent = urlParams.get('dob2');
+
+      var wardDisplay1 = document.getElementById('wardDisplay1');
+      wardDisplay1.textContent = urlParams.get('ward_code');
+
+      var familyDisplay1 = document.getElementById('familyDisplay1');
+      familyDisplay1.textContent = urlParams.get('family');
+
+      var sponsorDisplay1 = document.getElementById('sponsorDisplay1');
+      sponsorDisplay1.textContent = urlParams.get('sponsor');
+
+
+
+
+      
+    });
+  </script>
+ 
+
+ </body>
+ 
+ </html>
+ 
+
+
+</body>
+
+</html>

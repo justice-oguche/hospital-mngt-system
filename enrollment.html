@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/SchemeLogo2.png">
+    <title>BHIS - Bayelsa Health Insurance Scheme</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/plugins/feather/feather.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    
+     
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="enrollee-dsh.html" class="logo">
+					<img src="assets/img/SchemeLogo2.png" width="35" height="35" alt=""> <span style="padding-right: 9px;">B H I M S</span>
+					<img style="float: right;" src="assets/img/StateLogoB.png" width="34" height="34" alt="">
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg"  alt=""></a>
+            <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg"  alt=""></a>
+			<div class="top-nav-search mob-view">
+				<form>
+					<input type="text" class="form-control" placeholder="Search here">
+					<a class="btn" ><img src="assets/img/icons/search-normal.svg" alt=""></a>
+				</form>
+			</div>
+            <ul class="nav user-menu float-end">
+                
+				<li class="nav-item dropdown has-arrow user-profile-list">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+						<div class="user-names">
+							<span id="user-email"></span>
+                        	
+						</div>
+						<span class="user-img">
+							<img  src="assets/img/user-06.jpg"  alt="Admin">
+						</span>
+                    </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+						<a class="dropdown-item" href="settings.html">Settings</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+                </li>
+				<li class="nav-item ">
+                    <a href="settings.html"  class="hasnotifications nav-link"><img src="assets/img/icons/setting-icon-01.svg" alt=""> </a>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-end">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-01.svg" alt=""></span> <span> Dashboard </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a  href="index.html">Statistics</a></li>
+								<li><a  href="">Waiting Messages</a></li>
+							    <li><a  href="">Premium</a></li>
+							    <li><a  href="">My Status</a></li>
+							    <li><a  href="">My Insurance Card</a></li>
+							    <li><a  href="">Family History</a></li>
+
+
+
+
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-02.svg" alt=""></span> <span>New Registration </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+                                <li><a href="new-reg.html">New Enrollement</a></li>
+
+								<li><a href="add-doctor.html">Edit Enrollement</a></li>
+							</ul>
+						</li>
+						<!--<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-03.svg" alt=""></span> <span>Medical Services </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="">Call Manager</a></li>
+								<li><a href="">Refferal Manager</a></li>
+								<li><a href="">Claim Manager</a></li>
+								<li><a href="">Claims Vetting</a></li>
+								<li><a href="">Enrollee Encounter</a></li>
+							</ul>
+						</li>-->
+						
+						<li class="submenu">
+							<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-07.svg" alt=""></span> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="add-payments.html">Premium Payments</a></li>
+								<li><a href="account-mngt.html">Account Manager</a></li>
+							</ul>
+						</li>
+                        <li>
+                            <a href="settings.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-16.svg" alt=""></span> <span>Settings</span></a>
+                        </li>
+                        
+					<div class="logout-btn">
+						<a href="login.html"><span class="menu-side"><img src="assets/img/icons/logout.svg" alt=""></span> <span>Logout</span></a>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <!-- Page Header -->
+				<div class="page-header">
+					<div class="row">
+						<div class="col-sm-12">
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard </a></li>
+								<li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+								<li class="breadcrumb-item active">Enrollment </li>
+							</ul>
+						</div>
+					</div>
+                    
+				</div>
+				<!-- /Page Header -->
+            <div id="step-1">
+                <form  class="registrationForm" id="enrollee" action="confrim.html" method="get">
+                    <div class="card-box">
+                        <h3 class="card-title">Basic Informations</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="profile-img-wrap">
+                                    <img class="inline-block" src="assets/img/user.jpg" alt="user">
+                                    <div class="fileupload btn">
+                                        <span class="btn-text">edit</span>
+                                        <input class="upload" type="file">
+                                    </div>
+                                </div>
+                                <div class="profile-basic">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Title<span class="login-danger">*</span></label>
+												<select class="form-control select" id="title" name="title" required>
+													<option>Select  Title</option>
+                                                    <option >Alh.</option>
+                                                    <option >Amb.</option>
+													<option >Barr.</option>
+													<option >Chief</option>
+                                                    <option >Dame</option>
+													<option >Dr.</option>
+													<option >Engr.</option>
+													<option >Esq</option>
+													<option >Hon.</option>
+													<option >HRH</option>
+													<option >Jnr</option>
+													<option >JP</option>
+                                                    <option >Miss.</option>
+													<option >mni</option>
+													<option >Mr.</option>
+													<option >Mrs.</option>
+													<option >Prof.</option>
+													<option >Pst.</option>
+													<option >Sen.</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+                                                <label class="focus-label">First Name<span class="login-danger">*</span></label>
+                                                <input type="text" id="firstname" name="firstname" class="form-control floating" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+                                                <label class="focus-label">Middle Name</label>
+                                                <input type="text" id="middlename" name="middlename" class="form-control floating" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+                                                <label class="focus-label">Last Name<span class="login-danger">*</span></label>
+                                                <input type="text" id="lastname" name="lastname" class="form-control floating" required >
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms ">
+                                                <label class="focus-label"> Date of Birth<span class="login-danger">*</span></label>
+                                                <div class="cal-icon">
+                                                    <input class="form-control floating datetimepicker" id="dob" name="dob" type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Gender<span class="login-danger">*</span></label>
+												<select class="form-control select" id="sex" name="sex" required>
+													<option>Select  Gender</option>
+													<option >Male</option>
+													<option>Female</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Marital Status<span class="login-danger">*</span></label>
+												<select class="form-control select" id="marital_status" name="marital_status" required>
+													<option>Select  an option</option>
+													<option value="1">Single</option>
+													<option value="2">Married</option>
+													<option value="3">Separated</option>
+													<option value="4">Divorced</option>
+													<option value="5">Widowed</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Blood Group<span class="login-danger">*</span></label>
+												<select class="form-control select" id="blood_group" name="blood_group" required>
+													<option>Select  an option</option>
+													<option >A+</option>
+													<option>A-</option>
+													<option>AB+</option>
+													<option>AB-</option>
+													<option>B+</option>
+													<option>B-</option>
+													<option>O+</option>
+													<option>O-</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Enrollment Type<span class="login-danger">*</span></label>
+												<select class="form-control select" id="enrol_type" name="enrol_type"required >
+													<option>Select an option</option>
+													<option value="1" >Employee</option>
+                                                    <option value="2" >Spouse</option>
+													<option value="3">Child1</option>
+													<option value="4">Child2</option>
+													<option value="5">Child3</option>
+													<option value="6">Child4</option>
+													<option value="7">xDep</option>
+													<option value="8">Private</option>
+													<option value="9">Pensioneer</option>
+													<option value="10">Pensioneer</option>
+													<option value="11">Pensioneer</option>
+													<option value="13">BHCPF</option>
+													<option value="14">Appointtees</option>
+													<option value="17">Employee</option>
+													<option value="18">Employee</option>
+													<option value="19">Interns</option>
+													<option value="15">Appointtees</option>
+													<option value="16">Appointtees</option>
+													<option value="20">Interns</option>
+													<option value="21">Interns</option>
+													<option value="12">TSHIP</option>
+													<option value="22">Community</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Insurance ID<span class="login-danger">*</span></label>
+												<select class="form-control select" id="insure_id" name="insure_id" required>
+													<option>Select an option</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+													<option>5</option>
+													<option>6</option>
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+													<option>10</option>
+													<option>11</option>
+													<option>12</option>
+													<option>13</option>
+													<option>14</option>
+													<option>15</option>
+													<option>15</option>
+													<option>16</option>
+													<option>17</option>
+													<option>18</option>
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+												<label class="focus-label">Insurance Type<span class="login-danger">*</span></label>
+												<select class="form-control select" id="insure_type" name="insure_type" required>
+													<option>Select an option</option>
+													<option value="BHPF">Basic Healthcare Provision Fund Insurance</option>
+													<option value="CHIP">Community Healthcare Insurance Programme</option>
+													<option value="EMDP">"Employee Dependants Insurance</option>
+                                                    <option value="LGEP">Extra Dependants Insurance</option>
+													<option value="LGIA">Local Government Employees Insurance</option>
+													<option value="LPAP">Local Government Interns and Casuals</option>
+													<option value="LPEN">Local Government Political Appointtees</option>
+													<option value="PRVT">Local Government Pensioneers</option>
+													<option value="RDEP">Private Sector Practitioners Insurance</option>
+													<option value="RDIA">Rural Development Area Employee Insurance</option>
+													<option value="RPAP">Rural Development Area Interns and Casuals</option>
+													<option value="RPEN">Rural Development Area Political Appointtees</option>
+													<option value="SGEP">Rural Development Area Pensioneers</option>
+													<option value="SGIA">State Government Civil Service Insurance</option>
+													<option value="SPAP">State Government Interns and Casuals</option>
+													<option value="SPEN">State Government Political Appointtees Insurance</option>
+													<option value="TISP">State Government Pensioneers Insurance</option>
+													<option value="XTRA">Tertiary Institution Students Insurance</option>
+	
+												 </select>
+											</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+                                                <label class="focus-label">Family</label>
+                                                <input type="text" id="family" name="family" class="form-control floating" required >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group local-forms">
+                                                <label class="focus-label">Sponsor</label>
+                                                <input type="text" id="sponsor" name="sponsor" class="form-control floating" required >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box" id="about-cont">
+                        <h3 class="card-title">Contact Informations</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Residential Address<span class="login-danger"></span></label>
+                                    <input type="text" id="residential_address" name="residential_address" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Permanent Address<span class="login-danger"></span></label>
+                                    <input type="text" id="home_address" name="home_address" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Weight</label>
+                                    <input type="text" id="weight_kg" name="weight_kg" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Height</label>
+                                    <input type="text" id="height_cm" name="height_cm" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Eye Colour</label>
+                                    <input type="text" id="eye_colour" name="eye_colour" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Hair Colour</label>
+                                    <input type="text" id="hair_colour" name="hair_colour" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Phone Number<span class="login-danger">*</span></label>
+                                    <input type="number" id="phone_no" name="phone_no" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Physical Condition<span class="login-danger"></span></label>
+                                    <select class="form-control select" id="physicalcondition" name="physicalcondition" required>
+                                        <option>None</option>
+                                        <option>Disabled</option>
+                                        <option>Pregnant</option>
+                                        <option>Indegent</option>
+                                        <option>Others</option>
+                                     </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box" >
+                        <h3 class="card-title">Parental Informations</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Maiden Name</label>
+                                    <input type="text" id="maiden_name" name="maiden_name" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Mother's Maiden Name</label>
+                                    <input type="text" id="mother_maiden_name" name="mother_maiden_name" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Father's Name</label>
+                                    <input type="text" id="father_name" name="father_name" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Termination Date</label>
+									<div class="cal-icon">
+										<input type="text" id="exit_date" name="exit_date" class="form-control floating datetimepicker" >
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title">Employment Informations</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">MDA/Employer<span class="login-danger"></span></label>
+                                    <select class="form-control select" id="mda_name" name="mda_name" required>
+                                        <option>None</option>
+                                        <option value="BHCH0001" >OLOIBIRI COMMUNITY HEALTH</option>
+                                        <option value="BHPF0001" >BASIC HEALTH CARE PROVISION</option>
+                                        <option value="BHWB0001" >BHIS WEBAPP SELF ENROLLEES</option>
+                                        <option value="BYCC0001" >CREST CONSULTANT CLINIC AND FERTILITY CENTER</option>
+                                        <option value="BYCC0002" >NUN MICROFINANCE BANK LTD.</option>
+                                        <option value="BYCC0003" >BELIEVERS FAITH MEDICAL CENTER</option>
+                                        <option value="BYCC0004" >NUN MICROFINANCE BANK LTD.</option>
+                                        <option value="BYCC0005" >FAMILY CARE AND WELLNESS HOSPITAL</option>
+                                        <option value="BYCC0006" >EQUATOR MICROFINANCE BANK</option>
+                                        <option value="BYCC0007" >EBIKYS ENVIRONMENTAL COMPANY COY</option>
+                                        <option value="BYDA0001" >AKASSA RDA</option>
+                                        <option value="BYDA0002" >ALABINI RDA</option>
+                                        <option value="BYDA0003" >ALEIBIRI RDA</option>
+                                        <option value="BYDA0004" >ANYAMA RDA</option>
+                                        <option value="BYDA0005" >APOI-OLODIAMA RDA</option>
+                                        <option value="BYDA0006" >BASSAN-KOLUAMA RDA</option>
+                                        <option value="BYDA0007" >BOMO CENTRAL WEST RDA</option>
+                                        <option value="BYDA0008" >BOMO EAST RDA</option>
+                                        <option value="BYDA0010" >BRASS RDA</option>
+                                        <option value="BYDA0012" >EKEREMOR RDA</option>
+                                        <option value="BYDA0013" >GBARAIN-EKPETIAMA RDA</option>
+                                        <option value="BYDA0014" >KAIKO-IBEAWO RDA</option>
+                                        <option value="BYDA0015" >KOLO CREEK RDA</option>
+                                        <option value="BYDA0016" >KOLOKUMA-OPOKUMA RDA</option>
+                                        <option value="BYDA0018" >MEIN-OYIAKIRI RDA</option>
+                                        <option value="BYDA0019" >MINI-IKENSI RDA</option>
+                                        <option value="BYDA0020" >NEMBE EAST RDA</option>
+                                        <option value="BYDA0022" >NEMBE WEST RDA</option>
+                                        <option value="BYDA0023" >ODI RDA</option>
+                                        <option value="BYDA0024" >OGBIA CENTRAL RDA</option>
+                                        <option value="BYDA0026" >OGBIA RDA</option>
+                                        <option value="BYDA0027" >OGBOIN NORTH RDA</option>
+                                        <option value="BYDA0028" >"OGBOIN SOUTH TARAKIRI RDA</option>
+                                        <option value="BYDA0029" >OKODIA-ZARAMA-BISENI RDA</option>
+                                        <option value="BYDA0030" >OKOROMA-TEREKE RDA</option>
+                                        <option value="BYDA0031" >OPOROMOR WEST RDA</option>
+                                        <option value="BYDA0032" >OPUOKEDE RDA</option>
+                                        <option value="BYDA0034" >SAGBAMA RDA</option>
+                                        <option value="BYDA0036" >SOUTHERN IJAW RDA</option>
+                                        <option value="BYDA0037" >TARAKIRI RDA</option>
+                                        <option value="BYDA0038" >TORU-ABUBOU RDA</option>
+                                        <option value="BYDA0040" >YENAGOA RDA</option>
+                                        <option value="BYEI0001" >BEST BREED INTERNATIONAL ACADEMY</option>
+                                        <option value="BYEI0002" >APEX ACADEMY</option>
+                                        <option value="BYEI0003" >MYRTLE  INTERNATIONAL SCHOOL</option>
+                                        <option value="BYEI0004" >BELARY INTERNATIONAL ACADEMY</option>
+                                        <option value="BYEI0005" >STEPPING STONE SCHOOL</option>
+                                        <option value="BYER0001" >DUMMY MDA</option>
+                                        <option value="BYGP0001" >AGENCY FOR ADULT & NON-FORMAL EDUCATON</option>
+                                        <option value="BYGP0002" >AGRICULTURAL DEVELOPMENT PROGRAMME</option>
+                                        <option value="BYGP0003" >BAYELSA BROADCASTING CORPORATION</option>
+                                        <option value="BYGP0004" >BAYELSA QUEENS FOOTBALL</option>
+                                        <option value="BYGP0005" >BAYELSA STATE BUDGET OFFICE</option>
+                                        <option value="BYGP0006" >BAYELSA STATE POLYTECNIC</option>
+                                        <option value="BYGP0007" >BAYELSA STATE COLLEGE OF HEALTH TECHNOLOGY</option>
+                                        <option value="BYGP0008" >BAYELSA STATE GEOGRAPHIC INFORMATION SYSTEM</option>
+                                        <option value="BYGP0009" >BAYELSA HEALTH INSURANCE SCHEME</option>
+                                        <option value="BYGP0010" >BAYELSA STATE JUDICIARY</option>
+                                        <option value="BYGP0011" >BAYELSA STATE MICRO-FINANCE AGENCY</option>
+                                        <option value="BYGP0012" >BAYELSA STATE MUSEUMS & MONUMENT BOARD</option>
+                                        <option value="BYGP0013" >BAYELSA STATE NEWSPAPER CORPORATION</option>
+                                        <option value="BYGP0014" >BAYELSA STATE PARKS & GARDENS</option>
+                                        <option value="BYGP0015" >BAYELSA STATE PENSIONERS</option>
+                                        <option value="BYGP0016" >BAYELSA STATE PENSIONS BOARD</option>
+                                        <option value="BYGP0017" >BAYELSA STATE PHYSICAL PLANINIG & DEV. BOARD</option>
+                                        <option value="BYGP0018" >BAYELSA STATE PILGRIMS WELFARE BOARD</option>
+                                        <option value="BYGP0019" >BAYELSA STATE PLASTIC INDUSTRY</option>
+                                        <option value="BYGP0020" >BAYELSA STATE PRINTING PRESS</option>
+                                        <option value="BYGP0021" >BAYELSA STATE SPORTS COUNCIL</option>
+                                        <option value="BYGP0022" >BAYELSA STATE TOURISM DEV AGENCY</option>
+                                        <option value="BYGP0023" >BAYELSA STATE UNIVERSAL BASIC EDUC. BOARD</option>
+                                        <option value="BYGP0024" >BAYELSA STATE UNIVERSAL BASIC EDUC. BOARD (T.T.A.)</option>
+                                        <option value="BYGP0025" >BAYELSA TRANSPORT COMPANY</option>
+                                        <option value="BYGP0026" >BAYELSA UNITED FOOTBALL CLUB</option>
+                                        <option value="BYGP0027" >BOARD OF INTERNAL REVENUE</option>
+                                        <option value="BYGP0028" >BUREAU FOR CO-OPERATIVE DEVELOPMENT</option>
+                                        <option value="BYGP0029" >BYCAS PENSIONERS</option>
+                                        <option value="BYGP0030" >CIVIL SERVICE COMMISSION</option>
+                                        <option value="BYGP0031" >COUNCIL FOR  TRADITIONAL RULERS</option>
+                                        <option value="BYGP0032" >COUNCIL FOR ARTS AND CULTURE</option>
+                                        <option value="BYGP0033" >COUNCIL OF TRADITIONAL RULERS(STIPENDS)</option>
+                                        <option value="BYGP0034" >CUSTOMARY COURT OF APPEAL</option>
+                                        <option value="BYGP0035" >DEPUTY GOVERNOR OFFICE</option>
+                                        <option value="BYGP0036" >DIREC.  OF PROJECT MONITORING  & EVALUATION</option>
+                                        <option value="BYGP0037" >DUE PROCESS BUREAU</option>
+                                        <option value="BYGP0038" >e-GOVERNANCE BUREAU</option>
+                                        <option value="BYGP0039" >ENVIRONMENTAL SANITATION AUTHORITY</option>
+                                        <option value="BYGP0040" >GOVERNMENT HOUSE</option>
+                                        <option value="BYGP0041" >HEAD OF SERVICE (ESTAB.,TRAINING & PENSIONS BUREAU)</option>
+                                        <option value="BYGP0042" >HEAD OF SERVICE(MGT & WELFARE SERVICES)</option>
+                                        <option value="BYGP0043" >HOSPITALS MANAGEMENT BOARD</option>
+                                        <option value="BYGP0044" >HOUSE OF ASSEMBLY</option>
+                                        <option value="BYGP0045" >HOUSE OF ASSEMBLY (LEGISLATORS)</option>
+                                        <option value="BYGP0046" >HOUSE OF ASSEMBLY SERV. COMM</option>
+                                        <option value="BYGP0047" >HOUSING & PROPERTY DEV. AUTHORITY</option>
+                                        <option value="BYGP0048" >IJAW NATIONAL ACADEMY, KAIAMA</option>
+                                        <option value="BYGP0049" >INTER. INSTITUTE OF TOURISM & HOSPITALITY</option>
+                                        <option value="BYGP0050" >ISAAC JASPER BORO COLLEGE OF EDUC.</option>
+                                        <option value="BYGP0051" >ISAAC JASPER BORO COLLEGE OF EDUC.(PENSIONEERS)</option>
+                                        <option value="BYGP0052" >JUDICIAL SERVICE COMMISSION</option>
+                                        <option value="BYGP0054" >LIASON OFFICE, ABUJA</option>
+                                        <option value="BYGP0055" >LIASON OFFICE, LAGOS</option>
+                                        <option value="BYGP0056" >LIASON OFFICE, PORT HARCOURT</option>
+                                        <option value="BYGP0057" >LIBRARY BOARD</option>
+                                        <option value="BYGP0058" >MIN. OF COMM.DEV. & CHIEFTAINCY AFFAIRS</option>
+                                        <option value="BYGP0059" >MIN. OF CULTURE & IJAW NATIONAL AFFAIRS</option>
+                                        <option value="BYGP0060" >MIN. OF SCIENCE,  TECH. & MAN POWER DEV</option>
+                                        <option value="BYGP0061" >MIN. OF SPECIAL DUTIES FED. PROGR & PROJECT</option>
+                                        <option value="BYGP0062" >MIN. OF TRADE, INDUSTRY & INVESTMENT</option>
+                                        <option value="BYGP0063" >MIN. OF WOMEN AFFAIRS & SOCIAL DEV</option>
+                                        <option value="BYGP0064" >MINISTRY OF AGRIC. & NAT. RESOURCES</option>
+                                        <option value="BYGP0065" >MINISTRY OF BUDGET & ECONOMIC PLAN</option>
+                                        <option value="BYGP0066" >MINISTRY OF EDUCATION</option>
+                                        <option value="BYGP0067" >MINISTRY OF ENVIRONMENT</option>
+                                        <option value="BYGP0068" >MINISTRY OF FINANCE</option>
+                                        <option value="BYGP0069" >MINISTRY OF HEALTH (A)</option>
+                                        <option value="BYGP0070" >MINISTRY OF HEALTH HOUSE OFFICERS (B)</option>
+                                        <option value="BYGP0071" >MINISTRY OF HEALTH HOUSE OFFICERS (C)</option>
+                                        <option value="BYGP0072" >MINISTRY OF HOUSING & URBAN DEVELOPMENT</option>
+                                        <option value="BYGP0073" >MINISTRY OF INFORMATION & ORIENTATION</option>
+                                        <option value="BYGP0074" >MINISTRY OF JUSTICE</option>
+                                        <option value="BYGP0075" >MINISTRY OF LANDS AND SURVEY</option>
+                                        <option value="BYGP0076" >MINISTRY OF LOCAL GOVT ADMIN</option>
+                                        <option value="BYGP0077" >MINISTRY OF LOCAL GOVT ADMIN (G32)</option>
+                                        <option value="BYGP0078" >MINISTRY OF MINERAL RESOURCES</option>
+                                        <option value="BYGP0079" >MINISTRY OF POWER</option>
+                                        <option value="BYGP0080" >MINISTRY OF POWER (ELECTRICITY BOARD)</option>
+                                        <option value="BYGP0081" >MINISTRY OF SPECIAL DUTIES (CENTRAL SENATORIAL DISTRICT)</option>
+                                        <option value="BYGP0082" >MINISTRY OF SPECIAL DUTIES (EAST SENATORIAL DISTRICT)</option>
+                                        <option value="BYGP0083" >MINISTRY OF SPECIAL DUTIES (WEST SENATORIAL DISTRICT)</option>
+                                        <option value="BYGP0084" >MINISTRY OF SPECIAL PROJECTS</option>
+                                        <option value="BYGP0085" >MINISTRY OF SPORTS DEVELOPMENT</option>
+                                        <option value="BYGP0086" >MINISTRY OF TOURISM DEVELOPMENT</option>
+                                        <option value="BYGP0087" >MINISTRY OF TRANSPORT</option>
+                                        <option value="BYGP0088" >MINISTRY OF WATER RESOUCES</option>
+                                        <option value="BYGP0089" >MINISTRY OF WORKS & INFRASTRUCTURE</option>
+                                        <option value="BYGP0090" >MINISTRY OF YOUTHS DEVELOPMENT</option>
+                                        <option value="BYGP0091" >NIGER DELTA TELEVISION</option>
+                                        <option value="BYGP0092" >NIGER DELTA UNIVERSITY  TEACHING HOSPITAL</option>
+                                        <option value="BYGP0093" >NIGER DELTA UNIVERSITY (STAFF)</option>
+                                        <option value="BYGP0094" >NIGER DELTA UNIVERSITY TEACHING HOSPITAL (PART TIME)</option>
+                                        <option value="BYGP0095" >NIGER DELTA UNIVERSITY: PENSIONERS</option>
+                                        <option value="BYGP0096" >OFFICE OF SA TREASURY AND ACCOUNTS</option>
+                                        <option value="BYGP0097" >OFFICE OF THE ACCOUNTANT GENERAL</option>
+                                        <option value="BYGP0098" >OFFICE OF THE AUDITOR GENERAL (LG)</option>
+                                        <option value="BYGP0099" >OFFICE OF THE AUDITOR GENERAL (STATE)"</option>
+                                        <option value="BYGP0100" >OFFICE OF THE SURVEYOR-GENERAL</option>
+                                        <option value="BYGP0101" >POST PRIMARY SCHOOL BOARD-ANYAMA ZONE</option>
+                                        <option value="BYGP0102" >POST PRIMARY SCHOOLS  BOARD</option>
+                                        <option value="BYGP0103" >POST PRIMARY SCHOOLS BOARD KOLOKUMA OPOKUMA ZONE</option>
+                                        <option value="BYGP0104" >"POST PRIMARY SCHOOLS BOARD-BRASS ZONE</option>
+                                        <option value="BYGP0105" >POST PRIMARY SCHOOLS BOARD-DIEBU ZONE</option>
+                                        <option value="BYGP0106" >POST PRIMARY SCHOOLS BOARD-EKEREMOR ZONE</option>
+                                        <option value="BYGP0107" >POST PRIMARY SCHOOLS BOARD-NEMBE ZONE 1</option>
+                                        <option value="BYGP0108" >POST PRIMARY SCHOOLS BOARD-NEMBE ZONE 11</option>
+                                        <option value="BYGP0109" >POST PRIMARY SCHOOLS BOARD-OGBIA ZONE</option>
+                                        <option value="BYGP0110" >POST PRIMARY SCHOOLS BOARD-OKOLOBIRI ZONE</option>
+                                        <option value="BYGP0111" >POST PRIMARY SCHOOLS BOARD-OKORDIA ZARAMA ZONE</option>
+                                        <option value="BYGP0112" >POST PRIMARY SCHOOLS BOARD-OKUMBIRI ZONE</option>
+                                        <option value="BYGP0113" >POST PRIMARY SCHOOLS BOARD-PERETORUGBENE ZONE</option>
+                                        <option value="BYGP0114" >POST PRIMARY SCHOOLS BOARD-SAGBAMA ZONE</option>
+                                        <option value="BYGP0115" >POST PRIMARY SCHOOLS BOARD-SOUTHERN IJAW ZONE</option>
+                                        <option value="BYGP0116" >POST PRIMARY SCHOOLS BOARD-UKUBIE ZONE</option>
+                                        <option value="BYGP0117" >POST PRIMARY SCHOOLS BOARD-YENAGOA ZONE</option>
+                                        <option value="BYGP0118" >PUBLIC SERVICE TRAINING INSTITUTE</option>
+                                        <option value="BYGP0119" >S.A. ON CHIEFTAINCY AFFAIRS</option>
+                                        <option value="BYGP0120" >SA ON POLITICAL MATTERS</option>
+                                        <option value="BYGP0121" >SCHOLARSHIP BOARD</option>
+                                        <option value="BYGP0122" >SCHOOL -TO- LAND</option>
+                                        <option value="BYGP0123" >SCHOOL OF NURSING, TOMBIA STAFF</option>
+                                        <option value="BYGP0124" >SCHOOL OF NURSING, TOMBIA STUDENT</option>
+                                        <option value="BYGP0125" >SKILLS ACQUISITION</option>
+                                        <option value="BYGP0126" >SSG OFFICE_CIVIL SERVANTS</option>
+                                        <option value="BYGP0127" >SSG OFFICE_POLITICAL APPOINTEES</option>
+                                        <option value="BYGP0128" >STATE HIGH COURT JUDGES</option>
+                                        <option value="BYGP0129" >STATE INDEPENDENT ELECTORAL COMM.</option>
+                                        <option value="BYGP0130" >SUBEB BRASS</option>
+                                        <option value="BYGP0131" >SUBEB EKEREMOR</option>
+                                        <option value="BYGP0132" >SUBEB KOLOKUMA-OPOKUMA</option>
+                                        <option value="BYGP0133" >SUBEB NEMBE</option>
+                                        <option value="BYGP0134" >SUBEB OGBIA</option>
+                                        <option value="BYGP0135" >SUBEB SAGBAMA</option>
+                                        <option value="BYGP0136" >SUBEB SOUTHERN IJAW</option>
+                                        <option value="BYGP0137" >SUBEB YENAGOA</option>
+                                        <option value="BYGP0138" >SUSTAINABLE DEVELOPMENT GOALS</option>
+                                        <option value="BYGP0139" >TEACHERS TRIBUNAL & DISP. COUNCIL</option>
+                                        <option value="BYGP0140" >UNIVERSITY OF AFRICA</option>
+                                        <option value="BYGP0142" >BAYELSA STATE MINISTRY OF LABOUR & EMPLOYMENT</option>
+                                        <option value="BYGP0143" >BAYELSA STATE PRIMARY HEALTH CARE DEVELOPMENT BOARD</option>
+                                        <option value="BYGP0145" >BAYELSA MEDICAL UNIVERSITY</option>
+                                        <option value="BYGP0146" >BAYELSA STATE EDUCATION DEVELOPMENT TRUST FUND BOARD</option>
+                                        <option value="BYGP0147" >BAYELSA STATE LOCAL GOVERNMENT SERVICE COMMISSION</option>
+                                        <option value="BYGP0148" >BAYELSA AIRPORT COMPANY LTD</option>
+                                        <option value="BYGP0149" >BAYELSA STATE SCHOOL OF NURSING & BASIC MIDWIFERY SICKBAY</option>
+                                        <option value="BYGP0150" >COTTAGE HOSPITAL EKEREMOR</option>
+                                        <option value="BYLG0009" >BRASS LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0011" >EKEREMOR LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0017" >LOCAL GOVERNMENT PENSIONERS</option>
+                                        <option value="BYLG0021" >NEMBE LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0025" >OGBIA LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0033" >SAGBAMA LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0035" >SOUTHERN IJAW LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0039" >YENAGOA LOCAL GOVERNMENT AREA</option>
+                                        <option value="BYLG0053" >KOLOKUMA-OPOKUMA LOCAL GGOVERNMENT AREA</option>
+                                        <option value="BYPC0001" >WATER BOARD</option>
+                                        <option value="BYPC0002" >YENAGOA HOSPITAL & MATERNITY</option>
+                                        <option value="BYPC0003" >AYALLA HOTELS LTD.</option>
+                                        <option value="BYPI0001" >SELF EMPLOYED</option>
+                                        <option value="BYRG0001" >THE REDEEM CHRISTIAN CHURCH OF GOD (RCCG)</option>
+                                        <option value="BYRG0002" >THE REDEEM CHRISTIAN CHURCH OF GOD (RCCG)</option>
+                                        <option value="BYSE0001" >LEGAL PRACTITIONER</option>
+                                        <option value="BYSE0002" >MEDICAL PRACTITIONER</option>
+                                        <option value="BYSE0003" >ARTISAN</option>
+                                        <option value="BYSE0004" >GENERAL CONTRACTOR</option>
+                                        <option value="BYSE0005" >CONSULTANT</option>
+                                        <option value="BYSE0006" >TRADER</option>
+                                        <option value="BYTI0001" >NIGER DELTA UNIVERSITY STUDENTS</option>
+                                        <option value="BYTI0002" >GOODLUCK JONATHAN POLYTECNIC</option>
+                                        <option value="BYTU0001" >NIGERIA LABOUR CONGRESS</option>
+                                        <option value="BYTU0002" >TRADE UNION CONGRESS</option>
+                                        <option value="BYTU0003" >NATIONAL UNION OF ROAD TRANSPORT WORKERS</option>
+                                        <option value="BYTU0004" >NIGERIAN UNION OF JOURNALISTS</option>
+                                        <option value="BYTU0005" >NATIONAL COUNCIL OF WOMEN SOCIETIES</option>
+                                        <option value="BYTU0006" >NIGERIA CIVIL SERVICE UNION</option>
+                                        <option value="BYTU0007" >ACADEMIC STAFF UNION OF UNIVERSITIES</option>
+                                        <option value="BYTU0008" >ASSOCIATION OF SENIOR CIVIL SERVANTS OF NIGERIA</option>
+                                        <option value="BYTU0009" >NON-ACADEMIC STAFF UNION OF UNIVERSITIES</option>
+                                        <option value="BYTU0010" >ACADEMIC STAFF UNION OF POLYTECHNICS</option>
+                                        <option value="BYTU0011" >COLLEGES OF EDUCATION ACADEMIC STAFF UNION</option>
+                                        <option value="BYXR0001" >Extra Dependants</option>
+                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Department<span class="login-danger"></span></label>
+                                    <input type="text" id="department" name="department" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Designation<span class="login-danger"></span></label>
+                                    <input type="text" id="designation" name="designation" class="form-control floating" >
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Grade Level<span class="login-danger"></span></label>
+                                    <input type="number" id="grade_level" name="grade_level" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">Step<span class="login-danger">*</span></label>
+                                    <input type="number" id="grade_step" name="grade_step" class="form-control floating" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group local-forms">
+                                    <label class="focus-label">First Appointment Date</label>
+									<div class="cal-icon">
+										<input type="text" id="firstappointmentdate" name="firstappointmentdate" class="form-control floating datetimepicker" >
+									</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center m-t-20" style="float: right;">
+                        <button class="btn btn-primary submit-btn" type="button" id="next-button">Next</button>
+                    </div>
+                    <div id="step-2" style="display:none;">
+                
+                        <div class="card-box">
+                            <h3 class="card-title">Health Care Provider Data</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Health Care Provider<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="hcp_name" name="hcp_name" required>
+                                            <option>Select Health Care Provider</option>
+                                            <option value="PPPBRSG001">COTTAGE HOSPITAL, OKPOMA</option>
+                                            <option value="PPPEKMG003">COTTAGE HOSPITAL EKEREMOR</option>
+                                            <option value="PPPKMKG004">COTTAGE HOSPITAL, KAIAMA</option>
+                                            <option value="PPPKMKG005">COTTAGE HOSPITAL, OKOLOBA</option>
+                                            <option value="PPPKMKG006">COTTAGE HOSPITAL, OPOKUMA</option>
+                                            <option value="PPPKMKG088">BETHLEHEM PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPKMKG089">ODI SOUTH PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPKMKG090">PRIMARY HEALTH CENTER OKOLOBA</option>
+                                            <option value="PPPKMKG091">ODI NORTH PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPKMKG095">SAGBAMA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPKMKG099">KAIAMA PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPKMKG106">SABAGREIA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPKMKG109">SAMPOU PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPKMKG113">AKARABIRI HEALTH CENTRE</option>
+                                            <option value="PPPKMKG114">KAIAMA STAFF CLINIC</option>
+                                            <option value="PPPKMKG122">OFONIBIRI PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPKMKG125">PRIMARY HEALTHCARE IGBEDI</option>
+                                            <option value="PPPNEMG008">COTTAGE HOSPITAL, BASSAMBIRI"</option>
+                                            <option value="PPPNEMG089">PRIMARY HEALTH CENTER TOMBI</option>
+                                            <option value="PPPNEMG090">PRIMARY HEALTH CENTER IGBETA-EWOAMA</option>
+                                            <option value="PPPNEMG093">PRIMARY HEALTH CENTRE NEMBE BASSAMBIRI</option>
+                                            <option value="PPPNEMG094">ILULU PHC</option>
+                                            <option value="PPPNEMG096">OKIPIRI PHC</option>
+                                            <option value="PPPNEMG103">PRIMARY HEALTH CENTER OTATUBU</option>
+                                            <option value="PPPNEMG104">PRIMARY HEALTH CENTER NEMBE BASSAMBIRI</option>
+                                            <option value="PPPNEMG105">PRIMARY HEALTH CENTER ILULU</option>
+                                            <option value="PPPNEMG107">"PRIMARY HEALTH CENTER OKIPIRI</option>
+                                            <option value="PPPNEMG108">COMPREHENSIVE HEALTH CENTER OGBOLOMABIRI 2</option>
+                                            <option value="PPPOGBG010">COTTAGE HOSPITAL, OTUABAGI</option>
+                                            <option value="PPPOGBG013">COTTAGE HOSPITAL, AKIPELAI.</option>
+                                            <option value="PPPOGBG091">ORUMA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPOGBG092">KOLO PRIMARY HEALTH CARE CENTER</option>
+                                            <option value="PPPOGBG093">OTAKEME PRIMARY HEALTH CARE CENTRE</option>
+                                            <option value="PPPOGBG094">ELEBELE PRIMARY HEALTH CARE CENTER</option>
+                                            <option value="PPPOGBG095">OTUOKE COMPREHENSIVE HEALTH CENTER</option>
+                                            <option value="PPPOGBG096">OPUME COMPREHENSIVE HEALTH CENTER</option>
+                                            <option value="PPPOGBG099">OLOIBIRI PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPOGBG100">EMEYAL PRIMARY HEALTHCARE CENTRE</option>
+                                            <option value="PPPOGBG112">PRIMARY HEALTH CENTRE OTUOKPOTI</option>
+                                            <option value="PPPOGBG115">COMPREHENSIVE HEALTH CENTRE OGBIA</option>
+                                            <option value="PPPOGBG121">COMPREHENSIVE HEALTH CENTRE OTUOKE</option>
+                                            <option value="PPPOGBP068">OGBIA CLINIC</option>
+                                            <option value="PPPSALG014">COMPREHENSIVE HEALTH CENTRE, BOLOU-ORUA</option>
+                                            <option value="PPPSALG015">COMPREHENSIVE HEALTH CENTRE, TORU-ORUA</option>
+                                            <option value="PPPSALG016">COTTAGE HOSPITAL, AGBERE</option>
+                                            <option value="PPPSALG017">EBEDEBIRI COTTAGE HOSPITAL</option>
+                                            <option value="PPPSALG087">ANGALABIRI PRIMARY HELATH CENTRE</option>
+                                            <option value="PPPSALG092">OSIFOR PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG097">ASAMABIRI PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG098">PRIMARY HEALTH CENTER OFONI 1</option>
+                                            <option value="PPPSALG099">PRIMARY HEALTH CENTER OFONI II</option>
+                                            <option value="PPPSALG100">PRIMARY HEALTH CENTER EBEDEBIRI</option>
+                                            <option value="PPPSALG101">ODONI SAGBAMA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG104">ADAGBABIRI PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPSALG105">PRIMARY HEALTH CENTRE, OFONI 1</option>
+                                            <option value="PPPSALG106">AGBERE PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPSALG110">TROFANI PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG111">ADAGBABIRI PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG113">AGBERE PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPSALG117">PRIMARY HEALTH CENTER AGORO</option>
+                                            <option value="PPPSALG123">TORU_EBENI PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPSALP065">ALLISON CLINIC & MATERNITY CENTRE</option>
+                                            <option value="PPPSOUG019">COMPREHENSIVE HEALTH CENTRE, OPOROMA</option>
+                                            <option value="PPPSOUG020">COTTAGE HOSPITAL, KOROKOROSEI</option>
+                                            <option value="PPPSOUG021">COTTAGE HOSPITAL, PEREMABIRI</option>
+                                            <option value="PPPSOUG038">"NDU MEDICAL CENTRE</option>
+                                            <option value="PPPSOUG102">PRIMARY HEALTH CENTER AMASSOMA</option>
+                                            <option value="PPPSOUG124">PRIMARY HEALTHCARE AMATOLO</option>
+                                            <option value="PPPSOUG126">PRIMARY HEALTHCARE KOROKOROSEI</option>
+                                            <option value="PPPYENG024">F.S.P CLINIC</option>
+                                            <option value="PPPYENG026">COMPREHENSIVE HEALTH CENTRE, AZIKORO</option>
+                                            <option value="PPPYENG027">COTTAGE HOSPITAL, BISENI</option>
+                                            <option value="PPPYENG043">COTTAGE HOSPITAL ALEIBIRI</option>
+                                            <option value="PPPYENG044">COTTAGE HOSPITAL TAMOGBENE</option>
+                                            <option value="PPPYENG045">COTTAGE HOSPITAL OGBOINBIRI</option>
+                                            <option value="PPPYENG046">COTTAGE HOSPITAL OKOROBA</option>
+                                            <option value="PPPYENG086">OKOLOMA COMMUNITY HEALTH CENTRE</option>
+                                            <option value="PPPYENG088">BAYELSA STATE SCHOOL OF NURSING & BASIC MIDWIFERY SICKBAY</option>
+                                            <option value="PPPYENG089">YENIZUE-GENE PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENG090">POLAKU PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENG091">AGBURA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPYENG092">PRIMARY HEALTH CENTRE ZARAMA</option>
+                                            <option value="PPPYENG094">AKABA PRIMARY HEALTH CENTER</option>
+                                            <option value="PPPYENG096">EGBEBIRI PRIMARY HEALTHCARE CENTRE</option>
+                                            <option value="PPPYENG097">AGUDAMA-EPIE PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENG098">BUMOUNDI COMMUNITY HEALTH CARE CENTER</option>
+                                            <option value="PPPYENG107">PRIMARY HEALTH CARE CENTRE, KALABA</option>
+                                            <option value="PPPYENG108">YENAGOA PRIMARY HEALTH CARE CENTRE</option>
+                                            <option value="PPPYENG110">FAMGBE BASIC HEALTH CENTRE</option>
+                                            <option value="PPPYENG112">PRIMARY HEALTH CENTER ZARAMA</option>
+                                            <option value="PPPYENG116">OKAKA PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENG118">OBUNAGHA PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENG119">NEDUGO PRIMARY HEALTHCARE CENTRE</option>
+                                            <option value="PPPYENG120">TOMBIA EKPETIAMA PRIMARY HEALTH CENTRE</option>
+                                            <option value="PPPYENP031">FAMILY CARE AND WELLNESS HOSPITAL</option>
+                                            <option value="PPPYENP036">KOKOBO SPECIALIST CLINIC, AKENFA</option>
+                                            <option value="PPPYENP037">MAGCOL\u2019S CLINIC</option>
+                                            <option value="PPPYENP047">ALFA CLINIC</option>
+                                            <option value="PPPYENP048">MIEYE MEDICAL CENTRE</option>
+                                            <option value="PPPYENP049">FOUNTAIN OF LIFE HOSPITAL</option>
+                                            <option value="PPPYENP050">RIPUS HOSPITAL LIMITED</option>
+                                            <option value="PPPYENP051">THE ELITES CLINIC</option>
+                                            <option value="PPPYENP052">THE BAY CLINIC</option>
+                                            <option value="PPPYENP053">CENAC SPECIALIST HOSPITAL</option>
+                                            <option value="PPPYENP054">HOFFMAN HOSPITAL</option>
+                                            <option value="PPPYENP055">GODLY SHEPHERD SPECIALIST HOSPITAL</option>
+                                            <option value="PPPYENP056">ASUEIFAI HOSPITAL</option>
+                                            <option value="PPPYENP057">DELIGHTSOME SPECIALIST HOSPITAL</option>
+                                            <option value="PPPYENP058">MERCY SEAT HOSPITAL</option>
+                                            <option value="PPPYENP059">RAINBOW CONSULTANT CLINIC & DIALYSIS CENTRE</option>
+                                            <option value="PPPYENP060">THE FAMILY MEDICAL CLINIC</option>
+                                            <option value="PPPYENP061">METRIXMED CLINIC</option>
+                                            <option value="PPPYENP062">LIVING ROCK CLINIC</option>
+                                            <option value="PPPYENP063">GRACE SPECIALIST CLINIC & DIAGNOSTIC CENTRE</option>
+                                            <option value="PPPYENP064">PARKFIELD CLINIC</option>
+                                            <option value="PPPYENP069">"KURO SPECIALIST HOSPITAL</option>
+                                            <option value="PPPYENP074">GRAND CARE HOSPITAL</option>
+                                            <option value="PPPYENP087">BELIEVERS FAITH MEDICAL CLINIC</option>
+                                            <option value="PPPYENP093">FRANK-WEST SPECIALIST HOSPITAL LIMITED</option>
+                                            <option value="PPSYENP086">TRINIDEX MEDICAL SERVICES</option>
+                                            <option value="PSSBRSG002">GENERAL HOSPITAL TWON BRASS</option>
+                                            <option value="PSSKMKG007">GENERAL HOSPITAL, ODI</option>
+                                            <option value="PSSNEMG009">NEMBE GENERAL HOSPITAL</option>
+                                            <option value="PSSOGBG011">COTTAGE HOSPITAL, OTUASEGA</option>
+                                            <option value="PSSOGBG012">GENERAL HOSPITAL, KOLO</option>
+                                            <option value="PSSSALG018">GENERAL HOSPITAL, SAGBAMA.</option>
+                                            <option value="PSSSOUG022">GENERAL HOSPITAL, AMASSOMA</option>
+                                            <option value="PSSSOUG023">TANTUA HOSPITAL, AMASSOMA</option>
+                                            <option value="PSSSOUG094">COTTAGE HOSPITAL, OLUGBOBIRI</option>
+                                            <option value="PSSYENG025">BAYELSA SPECIALIST HOSPITAL</option>
+                                            <option value="PSSYENG029">DIETE-KOKI MEMORIAL HOSPITAL, OPOLO</option>
+                                            <option value="PSSYENG032">GENERAL HOSPITAL, AGUDAMA-EKPETIAMA</option>
+                                            <option value="PSSYENG039">N.D.U.T.H, OKOLOBIRI</option>
+                                            <option value="PSSYENG042">YENAGOA HOSPITAL AND MATERNITY</option>
+                                            <option value="PSSYENG098">HEALTH CENTRE, BAYELSA MEDICAL UNIVERSITY</option>
+                                            <option value="PSSYENP028">CREST CONSULTANT HOSPITAL AND FERTILITY CENTRE</option>
+                                            <option value="PSSYENP030">DIVINE GRACE MEDICAL CENTRE, OKOLOBIRI</option>
+                                            <option value="PSSYENP033">GLORYLAND HOSPITAL</option>
+                                            <option value="PSSYENP034">CREEK SPECIALIST HOSPITAL</option>
+                                            <option value="PSSYENP035">KING MALLASASIME MEDICAL CENTRE</option>
+                                            <option value="PSSYENP040">ST PETER\u2019S HOSPITAL</option>
+                                            <option value="PSSYENP041">TOBIS HOSPITAL</option>
+                                            <option value="PSSYENP075">CHANSMY HOSPITAL & MATERNITY LTD</option>
+                                            <option value="PSSYENP097">DANEBI SPECIALIST CLINIC</option>
+                                            <option value="SSSSOUP092">ST TUBI PHARMACEUTICAL & DIAGNOSTIC SERVICES LTD</option>
+                                            <option value="SSSYENG066">BAYELSA DIAGNOSTIC CENTRE</option>
+                                            <option value="SSSYENP067">MAY DENTAL HOSPITAL LIMITED</option>
+                                            <option value="SSSYENP070">FLOURISH CARE EYE CLINIC</option>
+                                            <option value="SSSYENP071">OLANDO MEDICAL & DENTAL HOSPITAL</option>
+                                            <option value="SSSYENP072">BONESMITH FOR ADVANCED RADIOGNOSTIC</option>
+                                            <option value="SSSYENP073">EBIZI DENTAL CLINIC</option>
+                                            <option value="SSSYENP076">SILHOUETTE RADIOGNOSTIE</option>
+                                            <option value="SSSYENP077">VIANDRA EYE CONSULTANTS</option>
+                                            <option value="SSSYENP078">FEDERAL MEDICAL CENTRE</option>
+                                            <option value="SSSYENP079">NINO CHILDREN'S HOSPITAL</option>
+                                            <option value="SSSYENP080">EYESPERE CLINICS</option>
+                                            <option value="SSSYENP081">BAYELSA STATE DRUG DISTRIBUTION CENTRE</option>
+                                            <option value="SSSYENP082">BETHEL DIAGNOSTICS SERVICES</option>
+                                            <option value="SSSYENP083">ST CHRISTOPHER DIAGNOSTIC CENTRE</option>
+                                            <option value="SSSYENP084">SCANEX DIAGNOSTICS LTD</option>
+                                            <option value="SSSYENP085">JAMIKS EYE CENTER & OPTICAL SERVICES</option>
+                                            <option value="SSSYENP089">VADONA DENTAL CLINIC LTD</option>
+                                            <option value="SSSYENP090">LUCENT EYE CLINIC</option>
+                                            <option value="SSSYENP091">PINNACLE GLOBAL MEDICAL DIAGNOSTICS</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Wards<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="ward_code" name="ward_code" required >
+                                            <option>Select an option</option>
+                                            <option value="NGS06L01R01">BRASS 1</option>
+                                            <option value="NGS06L01R02">BRASS 11</option>
+                                            <option value="NGS06L01R03">EWOAMA</option>
+                                            <option value="NGS06L01R04">OKPOAMA</option>
+                                            <option value="NGS06L01R05">ODIOMA\/DIEMA</option>
+                                            <option value="NGS06L01R06">CAPEFORMOSA</option>
+                                            <option value="NGS06L01R07">KONGHO</option>
+                                            <option value="NGS06L01R08">OGINIBIRI</option>
+                                            <option value="NGS06L01R09">MINIBIE</option>
+                                            <option value="NGS06L01R10">SANGANA</option>
+                                            <option value="NGS06L02R01">TARAKIRI</option>
+                                            <option value="NGS06L02R02">OYIAKIRI</option>
+                                            <option value="NGS06L02R03">OYIAKIRI 11</option>
+                                            <option value="NGS06L02R04">OYIAKIRI 111</option>
+                                            <option value="NGS06L02R05">OYIAKIRI 1V</option>
+                                            <option value="NGS06L02R06">OPOROMOR 1</option>
+                                            <option value="NGS06L02R07">OPOROMOR 11</option>
+                                            <option value="NGS06L02R08">OPOROMOR 111"</option>
+                                            <option value="NGS06L02R09">OPOROMO 1V</option>
+                                            <option value="NGS06L02R10">OPOROMO V</option>
+                                            <option value="NGS06L02R11">EDUWINI 1</option>
+                                            <option value="NGS06L03R01">EDUWINI 11</option>
+                                            <option value="NGS06L03R02">ODI CENTRA</option>
+                                            <option value="NGS06L03R03">ODI SOUTH</option>
+                                            <option value="NGS06L03R04">KAIAMA</option>
+                                            <option value="NGS06L03R05">KAIAMA \/OLUBIRI</option>
+                                            <option value="NGS06L03R06">"SAMPOU\/ KALAMA</option>
+                                            <option value="NGS06L03R07">OPOKUMA NORTH</option>
+                                            <option value="NGS06L03R08">OPOKUMA SOUTH</option>
+                                            <option value="NGS06L03R09">SABAGREIA</option>
+                                            <option value="NGS06L03R10">OKOLOBA</option>
+                                            <option value="NGS06L03R11">IGBDI</option>
+                                            <option value="NGS06L04R01">OGBOLOMABIRI 1</option>
+                                            <option value="NGS06L04R02">OGBOLOMABIRI 11</option>
+                                            <option value="NGS06L04R03">OGBOLOMABIRI 111</option>
+                                            <option value="NGS06L04R04">BASSA IMBIRI 1</option>
+                                            <option value="NGS06L04R05">BASSA IMBIRI 11</option>
+                                            <option value="NGS06L04R06">BASSA IMBIRI 111</option>
+                                            <option value="NGS06L04R07">BASSA IMBIRI 1V</option>
+                                            <option value="NGS06L04R08">IGBETA-EWOAM\/FANTUO</option>
+                                            <option value="NGS06L04R09">OKOROMA 1</option>
+                                            <option value="NGS06L04R10">OKOROMA 11</option>
+                                            <option value="NGS06L04R11">MINI</option>
+                                            <option value="NGS06L04R12">IKENSI</option>
+                                            <option value="NGS06L04R13">OLUASIRI</option>
+                                            <option value="NGS06L05R00">OTUOKE</option>
+                                            <option value="NGS06L05R01">OGBIA</option>
+                                            <option value="NGS06L05R02">OTUOKPOTI</option>
+                                            <option value="NGS06L05R03">OLODI</option>
+                                            <option value="NGS06L05R04">ANYAMA</option>
+                                            <option value="NGS06L05R05">OKODI</option>
+                                            <option value="NGS06L05R06">OTUASEGA</option>
+                                            <option value="NGS06L05R07">EMEYAL</option>
+                                            <option value="NGS06L05R08">IMIRINGI</option>
+                                            <option value="NGS06L05R09">KOLO</option>
+                                            <option value="NGS06L05R10">OLOIBIRI</option>
+                                            <option value="NGS06L05R11">OPUME</option>
+                                            <option value="NGS06L05R12">OTAKEME</option>
+                                            <option value="NGS06L05R13">OTUABULA</option>
+                                            <option value="NGS06L06R01">AGBERE</option>
+                                            <option value="NGS06L06R02">ANGALABIRI</option>
+                                            <option value="NGS06L06R03">OFONI 1</option>
+                                            <option value="NGS06L06R04">OFONI 11</option>
+                                            <option value="NGS06L06R05">EGBEDEBIRI</option>
+                                            <option value="NGS06L06R06">OSSIAMA</option>
+                                            <option value="NGS06L06R07">"ASAMABIRI</option>
+                                            <option value="NGS06L06R08">ODONI</option>
+                                            <option value="NGS06L06R09">TROFANI</option>
+                                            <option value="NGS06L06R10">SAGBAMA</option>
+                                            <option value="NGS06L06R11">AGORO</option>
+                                            <option value="NGS06L06R12">TORU-EBENI</option>
+                                            <option value="NGS06L06R13">ADAGBABIRI</option>
+                                            <option value="NGS06L06R14">OSEKWENIKE</option>
+                                            <option value="NGS06L07R01">OPOROMA I</option>
+                                            <option value="NGS06L07R02">OPOROMA II</option>
+                                            <option value="NGS06L07R03">OLODIAMA I</option>
+                                            <option value="NGS06L07R04">OLODIAMA II</option>
+                                            <option value="NGS06L07R05">OTUAN</option>
+                                            <option value="NGS06L07R06">WEST BOMO I</option>
+                                            <option value="NGS06L07R07">CENTRAL BOMO I</option>
+                                            <option value="NGS06L07R08">CENTRAL BOMO II</option>
+                                            <option value="NGS06L07R09">AMASSOMA I</option>
+                                            <option value="NGS06L07R10">AMASSOMA II</option>
+                                            <option value="NGS06L07R11">AMASSOMA III</option>
+                                            <option value="NGS06L07R12">EAST BOMO I</option>
+                                            <option value="NGS06L07R13">EAST BOMO II</option>
+                                            <option value="NGS06L07R14">FOROPA</option>
+                                            <option value="NGS06L07R15">APOI</option>
+                                            <option value="NGS06L07R16">UKUBIE</option>
+                                            <option value="NGS06L07R17">KULUAMA</option>
+                                            <option value="NGS06L08R01">ATTISSA I</option>
+                                            <option value="NGS06L08R02">ATTISSA II</option>
+                                            <option value="NGS06L08R03">ATTISSA III</option>
+                                            <option value="NGS06L08R04">EPIE I</option>
+                                            <option value="NGS06L08R05">EPIE II</option>
+                                            <option value="NGS06L08R06">EPIE III</option>
+                                            <option value="NGS06L08R07">GBARAIN I</option>
+                                            <option value="NGS06L08R08">GBARAIN II</option>
+                                            <option value="NGS06L08R09">GBARAIN III</option>
+                                            <option value="NGS06L08R10">EKPETIAMA I</option>
+                                            <option value="NGS06L08R11">EKPETIAMA II</option>
+                                            <option value="NGS06L08R12">BISENI II</option>
+                                            <option value="NGS06L08R13">BISENI I</option>
+                                            <option value="NGS06L08R14">OKORDIA</option>
+                                            <option value="NGS06L08R15">ZARAMA</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Provider Code<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="hcp_code" name="hcp_code" required >
+                                            <option>Select Code</option>
+                                            <option>PPP\/BRS\/G\/001</option>
+                                            <option>PPP\/EKM\/G\/003</option>
+                                            <option>PPP\/KMK\/G\/004</option>
+                                            <option>PPP\/KMK\/G\/005</option>
+                                            <option>PPP\/KMK\/G\/006</option>
+                                            <option>PPP\/KMK\/G\/088</option>
+                                            <option>PPP\/KMK\/G\/089</option>
+                                            <option>PPP\/KMK\/G\/090</option>
+                                            <option>PPP\/KMK\/G\/091</option>
+                                            <option>PPP\/KMK\/G\/095</option>
+                                            <option>PPP\/KMK\/G\/099</option>
+                                            <option>PPP\/KMK\/G\/106</option>
+                                            <option>PPP\/KMK\/G\/109</option>
+                                            <option>PPP\/KMK\/G\/113</option>
+                                            <option>PPP\/KMK\/G\/114</option>
+                                            <option>PPP\/KMK\/G\/122</option>
+                                            <option>PPP\/KMK\/G\/125</option>
+                                            <option>PPP\/NEM\/G\/008</option>
+                                            <option>PPP\/NEM\/G\/089</option>
+                                            <option>PPP\/NEM\/G\/090</option>
+                                            <option>PPP\/NEM\/G\/093</option>
+                                            <option>PPP\/NEM\/G\/094</option>
+                                            <option>PPP\/NEM\/G\/096</option>
+                                            <option>PPP\/NEM\/G\/103</option>
+                                            <option>PPP\/NEM\/G\/104</option>
+                                            <option>PPP\/NEM\/G\/105</option>
+                                            <option>PPP\/NEM\/G\/107</option>
+                                            <option>PPP\/NEM\/G\/108</option>
+                                            <option>PPP\/OGB\/G\/010</option>
+                                            <option>PPP\/OGB\/G\/013</option>
+                                            <option>PPP\/OGB\/G\/091</option>
+                                            <option>PPP\/OGB\/G\/092</option>
+                                            <option>PPP\/OGB\/G\/093</option>
+                                            <option>PPP\/OGB\/G\/094</option>
+                                            <option>PPP\/OGB\/G\/095</option>
+                                            <option>PPP\/OGB\/G\/096</option>
+                                            <option>PPP\/OGB\/G\/099</option>
+                                            <option>PPP\/OGB\/G\/100</option>
+                                            <option>PPP\/OGB\/G\/112</option>
+                                            <option>PPP\/OGB\/G\/115</option>
+                                            <option>PPP\/OGB\/G\/121</option>
+                                            <option>PPP\/OGB\/P\/068</option>
+                                            <option>PPP\/SAL\/G\/014</option>
+                                            <option>PPP\/SAL\/G\/015</option>
+                                            <option>PPP\/SAL\/G\/016</option>
+                                            <option>PPP\/SAL\/G\/017</option>
+                                            <option>PPP\/SAL\/G\/087</option>
+                                            <option>PPP\/SAL\/G\/092</option>
+                                            <option>PPP\/SAL\/G\/097</option>
+                                            <option>PPP\/SAL\/G\/098</option>
+                                            <option>PPP\/SAL\/G\/099</option>
+                                            <option>PPP\/SAL\/G\/100</option>
+                                            <option>PPP\/SAL\/G\/101</option>
+                                            <option>PPP\/SAL\/G\/104</option>
+                                            <option>PPP\/SAL\/G\/105</option>
+                                            <option>PPP\/SAL\/G\/106</option>
+                                            <option>PPP\/SAL\/G\/110</option>
+                                            <option>PPP\/SAL\/G\/111</option>
+                                            <option>PPP\/SAL\/G\/113</option>
+                                            <option>PPP\/SAL\/G\/117</option>
+                                            <option>PPP\/SAL\/G\/123</option>
+                                            <option>PPP\/SAL\/P\/065</option>
+                                            <option>PPP\/SOU\/G\/019</option>
+                                            <option>PPP\/SOU\/G\/020</option>
+                                            <option>PPP\/SOU\/G\/021</option>
+                                            <option>PPP\/SOU\/G\/038</option>
+                                            <option>PPP\/SOU\/G\/102</option>
+                                            <option>PPP\/SOU\/G\/124</option>
+                                            <option>PPP\/SOU\/G\/126</option>
+                                            <option>PPP\/YEN\/G\/024</option>
+                                            <option>PPP\/YEN\/G\/026</option>
+                                            <option>PPP\/YEN\/G\/027</option>
+                                            <option>PPP\/YEN\/G\/043</option>
+                                            <option>PPP\/YEN\/G\/044</option>
+                                            <option>PPP\/YEN\/G\/045</option>
+                                            <option>PPP\/YEN\/G\/046</option>
+                                            <option>PPP\/YEN\/G\/086</option>
+                                            <option>PPP\/YEN\/G\/088</option>
+                                            <option>PPP\/YEN\/G\/089</option>
+                                            <option>PPP\/YEN\/G\/090</option>
+                                            <option>PPP\/YEN\/G\/091</option>
+                                            <option>PPP\/YEN\/G\/092</option>
+                                            <option>PPP\/YEN\/G\/094</option>
+                                            <option>PPP\/YEN\/G\/096</option>
+                                            <option>PPP\/YEN\/G\/097</option>
+                                            <option>PPP\/YEN\/G\/098</option>
+                                            <option>PPP\/YEN\/G\/107</option>
+                                            <option>PPP\/YEN\/G\/108</option>
+                                            <option>PPP\/YEN\/G\/110</option>
+                                            <option>PPP\/YEN\/G\/112</option>
+                                            <option>PPP\/YEN\/G\/116</option>
+                                            <option>PPP\/YEN\/G\/118</option>
+                                            <option>PPP\/YEN\/G\/119</option>
+                                            <option>PPP\/YEN\/G\/120</option>
+                                            <option>PPP\/YEN\/P\/031</option>
+                                            <option>PPP\/YEN\/P\/036</option>
+                                            <option>PPP\/YEN\/P\/037</option>
+                                            <option>PPP\/YEN\/P\/047</option>
+                                            <option>PPP\/YEN\/P\/048</option>
+                                            <option>PPP\/YEN\/P\/049</option>
+                                            <option>PPP\/YEN\/P\/050</option>
+                                            <option>PPP\/YEN\/P\/051</option>
+                                            <option>PPP\/YEN\/P\/052</option>
+                                            <option>PPP\/YEN\/P\/053</option>
+                                            <option>PPP\/YEN\/P\/054</option>
+                                            <option>PPP\/YEN\/P\/055</option>
+                                            <option>PPP\/YEN\/P\/056</option>
+                                            <option>PPP\/YEN\/P\/057</option>
+                                            <option>PPP\/YEN\/P\/058</option>
+                                            <option>PPP\/YEN\/P\/059</option>
+                                            <option>PPP\/YEN\/P\/060</option>
+                                            <option>PPP\/YEN\/P\/061</option>
+                                            <option>PPP\/YEN\/P\/062</option>
+                                            <option>PPP\/YEN\/P\/063</option>
+                                            <option>PPP\/YEN\/P\/064</option>
+                                            <option>PPP\/YEN\/P\/069</option>
+                                            <option>PPP\/YEN\/P\/074</option>
+                                            <option>PPP\/YEN\/P\/087</option>
+                                            <option>PPP\/YEN\/P\/093</option>
+                                            <option>PPS\/YEN\/P\/086</option>
+                                            <option>PSS\/BRS\/G\/002</option>
+                                            <option>PSS\/KMK\/G\/007</option>
+                                            <option>PSS\/NEM\/G\/009</option>
+                                            <option>PSS\/OGB\/G\/011</option>
+                                            <option>PSS\/OGB\/G\/012</option>
+                                            <option>PSS\/SAL\/G\/018</option>
+                                            <option>PSS\/SOU\/G\/022</option>
+                                            <option>PSS\/SOU\/G\/023</option>
+                                            <option>PSS\/SOU\/G\/094</option>
+                                            <option>PSS\/YEN\/G\/025</option>
+                                            <option>PSS\/YEN\/G\/029</option>
+                                            <option>PSS\/YEN\/G\/032</option>
+                                            <option>PSS\/YEN\/G\/039</option>
+                                            <option>PSS\/YEN\/G\/042</option>
+                                            <option>PSS\/YEN\/G\/098</option>
+                                            <option>PSS\/YEN\/P\/028</option>
+                                            <option>PSS\/YEN\/P\/030</option>
+                                            <option>PSS\/YEN\/P\/033</option>
+                                            <option>PSS\/YEN\/P\/034</option>
+                                            <option>PSS\/YEN\/P\/035</option>
+                                            <option>PSS\/YEN\/P\/040</option>
+                                            <option>PSS\/YEN\/P\/041</option>
+                                            <option>PSS\/YEN\/P\/075</option>
+                                            <option>PSS\/YEN\/P\/097</option>
+                                            <option>SSS\/SOU\/P\/092</option>
+                                            <option>SSS\/YEN\/G\/066</option>
+                                            <option>SSS\/YEN\/P\/067</option>
+                                            <option>SSS\/YEN\/P\/070</option>
+                                            <option>SSS\/YEN\/P\/071</option>
+                                            <option>SSS\/YEN\/P\/072</option>
+                                            <option>SSS\/YEN\/P\/073</option>
+                                            <option>SSS\/YEN\/P\/076</option>
+                                            <option>SSS\/YEN\/P\/077</option>
+                                            <option>SSS\/YEN\/P\/078</option>
+                                            <option>SSS\/YEN\/P\/079</option>
+                                            <option>SSS\/YEN\/P\/080</option>
+                                            <option>SSS\/YEN\/P\/081</option>
+                                            <option>SSS\/YEN\/P\/082</option>
+                                            <option>SSS\/YEN\/P\/083</option>
+                                            <option>SSS\/YEN\/P\/084</option>
+                                            <option>SSS\/YEN\/P\/085</option>
+                                            <option>SSS\/YEN\/P\/089</option>
+                                            <option>SSS\/YEN\/P\/090</option>
+                                            <option>SSS\/YEN\/P\/091</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Provider Address<span class="login-danger"></span></label>
+                                        <select class="form-control select" id="hcp_address" name="hcp_address" >
+                                            <option>Select an opttion</option>
+                                            <option>OKPOAMA</option>
+                                            <option>EKEREMOR TOWN</option>
+                                            <option>KAIAMA TOWN</option>
+                                            <option>10. HOSP.OKOLOBA C\/O HMB P.M.B 41 YENAGOA</option>
+                                            <option>OPOKUMA TOWN</option>
+                                            <option>BETHLEHEM</option>
+                                            <option>ISOUNBIRI</option>
+                                            <option>OKOLOBA</option>
+                                            <option>KEMENANABOAMA</option>
+                                            <option>SAGBAMA TOWN</option>
+                                            <option>KAIAMA TOWN</option>
+                                            <option>SABAGREIA</option>
+                                            <option>SAMPOU COMMUNITY</option>
+                                            <option>AKARABIR</option>
+                                            <option>KAIAMA TOWN</option>
+                                            <option>OFONIBIRI COMMUNITY OPOKUMA</option>
+                                            <option>AYAMA COMPOUND IGBEDI</option>
+                                            <option>BASSAMBIRI NEMBE</option>
+                                            <option>OGBOLOMABIRI</option>
+                                            <option>IGBETA-EWOAMA</option>
+                                            <option>DERIRIAMA BASSAMBIRI</option>
+                                            <option>GOVERNMENT GIRLS SEC. SCH. RD. ILULU BASSAMBIRI</option>
+                                            <option>IWARI-AMA OKPIRI</option>
+                                            <option>OGBOLOMABIRI 3</option>
+                                            <option>DARRIAMA BASSAMBIRI</option>
+                                            <option>GOVERNMENT GIRLS SEC SCH. ROAD ILULU BASSAMBIRI 1</option>
+                                            <option>IWARI-AMA, OKIPIRI</option>
+                                            <option>AGBUTUMU-POLO</option>
+                                            <option>OTUABAGI TOWN</option>
+                                            <option>OtherCOTTAGE HOSPITAL AKIPELIA OPPOSITE CORPERS LODGE AKIPELAIs</option>
+                                            <option>PHC ORUMA, OKUMANI SETTLEMENT, OGBIA</option>
+                                            <option>COMPREHENSIVE HEALTH CENTER, KOLO TOWN</option>
+                                            <option>OTAKEME COMMUNITY</option>
+                                            <option>PHC ELEBELE COMMUNITY</option>
+                                            <option>OTUOKE CHC OBEBHEGBOND</option>
+                                            <option>OPUME CHC, ASAN COMPOUND, OPUME</option>
+                                            <option>OLOIBIRI PHC, AMANGALA COMPOUND, OLOIBIRI</option>
+                                            <option>PHC EMEYAL, EMEYAL 2 COMMUNITY</option>
+                                            <option>OTUOKPOTI PHC AGOTOMA</option>
+                                            <option>OGBIA TOWN</option>
+                                            <option>OTUOKE TOWN OGBIA</option>
+                                            <option>16, OLOIBIRI ROAD, OGBIA TOWN</option>
+                                            <option>BOLOU-ORUA</option>
+                                            <option>HOSPITAL MANAGEMENT BOARD SECRETARIAT</option>
+                                            <option>AGBERE COMMUNITY</option>
+                                            <option>COTTAGE HOSPITAL EBEDEBIRI</option>
+                                            <option>ANGALABIRI TOWN</option>
+                                            <option>OSIFOR TOWN SAGBAMA</option>
+                                            <option>ASAMABIRI</option>
+                                            <option>SHELL BASE</option>
+                                            <option>EKEROGBE</option>
+                                            <option>EBEDEBIRI</option>
+                                            <option>ODONI TOWN</option>
+                                            <option>ADAGBABIRI TOWN</option>
+                                            <option>SHELL BASE</option>
+                                            <option>AGBERE TOWN</option>
+                                            <option>TROFANI</option>
+                                            <option>ADAGBABIRI TOWN</option>
+                                            <option>AGBERE TOWN</option>
+                                            <option>AGORO</option>
+                                            <option>AYAMAN COMPOUND,  TORU EBENI</option>
+                                            <option>COMMISIONERS ROAD,  SAGBAMA TOWN,  SAGBAMA LGA,  BAYELSA STATE.</option>
+                                            <option>Comprehensive Health Centre, Oporoma</option>
+                                            <option>Cottage Hospital Korokorosei</option>
+                                            <option>COTTAGE HOSPITAL PEREMABIRI SOUTHERN IJAW LGA</option>
+                                            <option>Niger Delta University, Amassoma</option>
+                                            <option>OKOLOBA-AMA</option>
+                                            <option>OLOTPELE COMPOUND AMATOLO</option>
+                                            <option>AYAKOROAMA QUARTERS KOROKOROSEI</option>
+                                            <option>NO.1 CAPTAIN AMANGALA STREET,  YENAGOA</option>
+                                            <option>AZIKORO TOWN, YENAGOA</option>
+                                            <option>COTTAGE HOSPITAL, TEIN-BISENI</option>
+                                            <option>Aleibiri Town Ekeremor LGA</option>
+                                            <option>Tamogbene Town Ekeremor LGA</option>
+                                            <option>Ogboinbiri Town Southern Ijaw LGA</option>
+                                            <option>Okoroba Town Nembe LGA</option>
+                                            <option>EDEPIE VILLAGE CENTRE</option>
+                                            <option>TOMBIA-EKPETIAMA, PMB 55, YENAGOA.</option>
+                                            <option>YENIZUE-GENE, YENAGOA</option>
+                                            <option>AYORO COMPOUND POLAKU</option>
+                                            <option>AGBURA COMMUNITY</option>
+                                            <option>ZARAMA COMMUNITY</option>
+                                            <option>AKABA TOWN YENAGOA</option>
+                                            <option>EGBEBIR BESENI II</option>
+                                            <option>AGUDAMA-EPI YENAGOA</option>
+                                            <option>COMPREHENSIVE HEALTH CENTER, BUMOUNDI</option>
+                                            <option>KALABA COMMUNITY</option>
+                                            <option>YENAGOA TOWN</option>
+                                            <option>FAMGBE TOWN</option>
+                                            <option>ZARAMA</option>
+                                            <option>OKAKA TOWN</option>
+                                            <option>OBUNAGHA COMMUNITY</option>
+                                            <option>NEDUGO COMMUNITY YENAGOA</option>
+                                            <option>TOMBIA TOWN YENAGOA</option>
+                                            <option>AIT  ROAD, OPOLO.</option>
+                                            <option>CHIEF MELFORD OKILO ROAD OPPOSITE PEPPERONI AKENFA.</option>
+                                            <option>33 GWEGWE STREET, OVOM, YENAGOA</option>
+                                            <option>ALFA CLINIC CLOSE, OFF IMIRINGI ROAD, EDEPIE</option>
+                                            <option>616\/330  MELFORD OKILO ROAD OPOLO YENAGOA</option>
+                                            <option>52 Erepa Road Yenezuegene</option>
+                                            <option>35 Otiotio Road Yenezuegene</option>
+                                            <option>Liberty lane Off Bakery Road Azikoro</option>
+                                            <option>4 Fimmy Ebi Street Amarata</option>
+                                            <option>OLD HOUSE OF ASSSEMBLY ROAD OPPOSITE SAMANTHA KLEENS</option>
+                                            <option>Ngnongbo Plaza Ekeki</option>
+                                            <option>14 Akoi Sreet Yenezuegene</option>
+                                            <option>9 ASUEIFAI STREET BAYBRIDGE KPANSIA</option>
+                                            <option>Oppposite Nigerian Law School Agudama-Epie</option>
+                                            <option>Halleluyah Deliverance Ministry Imiringi Road Ede-Ede</option>
+                                            <option>Opposite 500 Bed Hospital Behind Sir Ben Cafe</option>
+                                            <option>OFF NANEKE ACCT GEN ROAD AKENFA III</option>
+                                            <option>49 CUSTOM ROAD BIOGBOLO</option>
+                                            <option>48 Obele Street Ovom Yenagoa</option>
+                                            <option>674 Melford Okilo Road Near Golden Gate Hotel Opolo</option>
+                                            <option>Azikoro Villlage Road Azikoro</option>
+                                            <option>OTIOTIO ROAD YENEZUAGENE YENAGOA</option>
+                                            <option>NO 30 TINACIOUS STREET EDEPIE YENAGOA BAYELSA STATE</option>
+                                            <option>ONOPA, YENAGOA</option>
+                                            <option>NO. 20  IMGBI ROAD, AMARATA, YENAGOA</option>
+                                            <option>IDIDIE HOTEL ROAD, EKEKI, YENAGOA</option>
+                                            <option>TWON-BRASS</option>
+                                            <option>ODI TOWN</option>
+                                            <option>OGBOLOMABIRI, NEMBE</option>
+                                            <option>OTUASEGA COMMUNITY OGBIA</option>
+                                            <option>KOLO TOWN HOSPITAL MANAGEMENT BOARD OGBIA</option>
+                                            <option>GENERAL HOSPITAL SAGBAMA</option>
+                                            <option>C.H.S. NDU AMASSOMA</option>
+                                            <option>Tantua Hospital, Amassoma</option>
+                                            <option>OLUGBOBIRI TOWN, SOUTHERN IJAW LGA, BAYELSA STATE.</option>
+                                            <option>BESIDE GOVERNMENT HOUSE, OVOM, YENAGOA.</option>
+                                            <option>OLD COMMISIONERS' QUARTERS ROAD, OPOLO</option>
+                                            <option>General Hospital, Agudama-Ekpetiama</option>
+                                            <option>P. M. B. 100 NDUTH, OKOLOBIRI</option>
+                                            <option>13 YENIZUE-EPIE STREET  (SAPTEX ROAD), YENAGOA.</option>
+                                            <option>IMGBI ROAD, YENAGOA, BAYELSA STATE</option>
+                                            <option>OKOLOBIRI TOWN</option>
+                                            <option>OPPOSITE NEW COMMISSIONERS QUARTERS OPOLO, YENAGOA.</option>
+                                            <option>18 D.S.P. ALAMIEYESEIGHA WAY HOSPITAL JUNCTION, YENAGOA.</option>
+                                            <option>IGBOGENE-EPIE, YENAGOA</option>
+                                            <option>"NO.10 ST. PETERS HOSPITAL STREET,  AMARATA.</option>
+                                            <option>KM 14, CHIEF MELFORD OKILO ROAD AKENFA YENAGOA, BAYELSA STATE.</option>
+                                            <option>NO. 17 INEC ROAD KPANSIA YENAGOA BAYELSA STATE</option>
+                                            <option>OFF NO. 8B OSIRI ROAD, EKEKI, YENAGOA, BAYELSA STATE</option>
+                                            <option>NO 10 ALAMIEYESEIGHA ROAD, AMASSOMA TOWN, BAYELSA STATE</option>
+                                            <option>IMGBI ROAD, AMARATA, YENAGOA.</option>
+                                            <option>OFF BAYBRIDGE ROAD, KPANSIA, YENAGOA.</option>
+                                            <option>NO. 55 NIKTON ROAD KPANSIA YENAGOA BAYELSA STATE</option>
+                                            <option>DISEMI PLAZA, NEW AKENFA MARKET JUNKTION YENAGOA</option>
+                                            <option>NO. 18 ALAMIEYESEIGHA WAY OVUM YENAGOA</option>
+                                            <option>ROAD 3 PLOT 6 EKEKI HOUSING ESTATE YENAGOA BAYELSA STATE</option>
+                                            <option>KLM 25 CHIEF MELFORT OKILO ROAD, OPPOSITE OTIOTIO JUNCTION BAYELSA STATE</option>
+                                            <option>770B MELFORT OKILO ROAD YENAGOA</option>
+                                            <option>HOSPITAL ROAD OVUM YENAGOA BAYELSA STATE</option>
+                                            <option>OPPOSITE WINNER JUNCTION, ISAAC BORO EXPRESS WAY ETEGWE YENAGOA BAYESA STATE</option>
+                                            <option>AG HOUSE AIRFORCE ROAD OKAKA \/ISAAC BORO EXPRESS WAY YENAGOA</option>
+                                            <option>OFF SANI ABACHA EXPRESS WAY YENAGOA BAYELSA STATE</option>
+                                            <option>NO.14 INEC ROAD KPANSIA YENAGOA BAYELSA STATE</option>
+                                            <option>NO.780 CHIEF MELFORT OKILO ROAD YENAGOA BAYELSA STATE</option>
+                                            <option>NO.12 OSIRI\/WETLAND ROAD EKEKI YENAGOA BAYELSA STATE</option>
+                                            <option>NO.137 MELFORT OKILO ROAD AMARATA OPPOSITE ST JUDES GIRLS SEC SCH</option>
+                                            <option>SUIT 2C, GLORIOUS PLAZA, 137 MELFORD OKILO ROAD, OPPOSITE ST JUDES GIRLS SECONDARY SCHOOL, AMARATA, YENAGOA</option>
+                                            <option>NO 42 AZIKORO VILLAGE, AZIKORO TOWN, YENAGOA</option>
+                                            <option>NO 73 EREPA ROAD, OFF BISHOP'S COURT, YENAGOA.</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <h3 class="card-title">Next Of Kin Information</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Full Name<span class="login-danger">*</span></label>
+                                        <input type="text" id="nok_name" name="nok_name" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Address<span class="login-danger">*</span></label>
+                                        <input type="text" id="nok_address" name="nok_address" class="form-control floating"required >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Relationship<span class="login-danger">*</span></label>
+                                        <input type="text" id="nok_relationship" name="nok_relationship" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Phone No<span class="login-danger"></span></label>
+                                        <input type="number" id="nok_phone" name="nok_phone" class="form-control floating" required >
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card-box" >
+                            <h3 class="card-title">Origin Information</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Country of Origin<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="origin_country" name="origin_country" required>
+                                            <option value=""> Select country</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">State of Origin<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="origin_state" name="origin_state" required>
+                                            <option value="">Select state</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">LGA of Origin<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="origin_lga" name="origin_lga" required>
+                                            <option value=""> Select LGA</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Nationality<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="nationality" name="nationality" required>
+                                            <option value="">-- Select --</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Home Town<span class="login-danger">*</span></label>
+                                        <input type="text" id="home_town" name="home_town" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Place of Birth<span class="login-danger">*</span></label>
+                                        <input type="text" id="placeofbirth" name="placeofbirth" class="form-control floating">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-box">
+                            <h3 class="card-title">Identification</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Identity Type<span class="login-danger">*</span></label>
+                                        <input type="text" id="identity_type" name="identity_type" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Idenity No<span class="login-danger">*</span></label>
+                                        <input type="text" id="identity_no" name="identity_no" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Expiry Date<span class="login-danger">*</span></label>
+                                        <div class="cal-icon">
+                                            <input type="text" id="identity_expire" name="identity_expire" class="form-control floating datetimepicker" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-box"  >
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Principal<span class="login-danger">*</span></label>
+                                        <input type="text" id="principal" name="principal" class="form-control floating" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Title</label>
+                                        <input type="text" class="form-control floating" id="deptitle" name="deptitle">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Surname</label>
+                                        <input type="text" class="form-control floating" id="depsurname" name="depsurname" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">Other Names</label>
+                                      
+                                            <input type="text" id="depothernames" name="depothernames" class="form-control floating" >
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms">
+                                        <label class="focus-label">sex<span class="login-danger">*</span></label>
+                                        <select class="form-control select" id="sex" name="sex" >
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                         </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label class="focus-label">Date of Birth</label>
+                                        <div class="cal-icon">
+                                            <input type="text" id="dob2" name="dob2" class="form-control floating datetimepicker" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table Header -->
+                    <div class="card-box"  >  
+                        <div class="page-table-header mb-2">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <div class="doctor-table-blk">
+                                        <h3>Add Dependant</h3>
+                                        <div class="doctor-search-blk">
+                                            
+                                            <div class="add-group">
+                                                <a  class="btn btn-primary add-pluss ms-2" onclick="addFormRow()"><img src="assets/img/icons/plus.svg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Table Header -->
+                         <!--<div class="staff-search-table">
+                                <div class="row" id="formContainer">
+                                    <div class="col-12 col-md-6 col-xl-4 ">
+                                        <div class="form-group local-forms">
+                                            <label >Dependant Type</label>
+                                            <select class="form-control select" id="dependantype" name="dependantype" >
+                                                <option>Select Dependant Type</option>
+                                                <option>Spouse</option>
+                                                <option>Child1</option>
+                                                <option>Child3</option>
+                                                <option>Child4</option>
+                                                <option>Child5</option>
+                                                <option>Child6</option>
+                                                <option>Child7</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-4 ">
+                                        <div class="form-group local-forms">
+                                            <label >Title</label>
+                                            <select class="form-control select" id="depttitle" name="depttitle" >
+                                                <option>MR.</option>
+                                                <option>MRS.</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="form-group local-forms">
+                                            <label >Surname</label>
+                                            <input class="form-control floating" type="text"   >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="form-group local-forms">
+                                            <label >Other Names</label>
+                                            <input class="form-control floating" type="text" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-4 ">
+                                        <div class="form-group local-forms">
+                                            <label >Sex </label>
+                                            <select class="form-control select">
+                                                <option>----Select----</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Others</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-xl-4 ">
+                                        <div class="form-group local-forms">
+                                            <label >Blood Group</label>
+                                            <select class="form-control select">
+                                                <option>----Select----</option>
+                                                <option>null</option>
+                                                <option>null</option>
+                                                <option>null</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group local-forms cal-icon">
+                                            <label class="focus-label">Date of Birth</label>
+                                            <div class="cal-icon">
+                                                <input type="text" id="dob2" name="dob2" class="form-control floating datetimepicker" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                        </div>-->
+                    </div>
+                    
+                    
+                        <button id="savebtn" class="btn btn-primary submit-btn" type="submit">Submit</button>
+              
+                </form>
+                      
+                <div class="text-center m-t-20" style="float: right;">
+                    <button class="btn btn-primary submit-btn" type="button" id="previous-button">previous</button>
+                </div>
+            
+            </div>
+            
+            <div class="notification-box">
+                <div class="msg-sidebar notifications msg-noti">
+                    <div class="topnav-dropdown-header">
+                        <span>Messages</span>
+                    </div>
+                    <div class="drop-scroll msg-list-scroll" id="msg_list">
+                        <ul class="list-box">
+                            <li>
+                                <a href="chat.html">
+                                    <div class="list-item">
+                                        <div class="list-left">
+                                            <span class="avatar">R</span>
+                                        </div>
+                                        <div class="list-body">
+                                            <span class="message-author">Richard Miles </span>
+                                            <span class="message-time">12:28 AM</span>
+                                            <div class="clearfix"></div>
+                                            <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script>
+        // Get the elements we need
+         const step1 = document.getElementById('step-1');
+         const step2 = document.getElementById('step-2');
+         const nextButton = document.getElementById('next-button');
+         const previousButton = document.getElementById('previous-button');
+         
+         // Add event listeners to the buttons
+         nextButton.addEventListener('click', () => {
+           step1.style.display = 'none';
+           step2.style.display = 'block';
+           window.scrollTo(0, 0); // Scroll to top of the page
+         });
+         
+         previousButton.addEventListener('click', () => {
+           step2.style.display = 'none';
+           step1.style.display = 'block';
+});
+
+    </script>
+
+   
+    <script>
+	// Check if there is a stored user email
+    if(localStorage.getItem("email")) {
+  // If there is, display the email address in the span element
+   const userEmail = localStorage.getItem("email");
+   document.getElementById('user-email').innerText = userEmail;
+}
+
+ </script>
+
+<script>
+    // Array of all countries in the world
+    var countries = [
+      "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia",
+      "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin",
+      "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+      "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia",
+      "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica",
+      "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia",
+      "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece",
+      "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India",
+      "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya",
+      "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho",
+      "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali",
+      "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia",
+      "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand",
+      "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea",
+      "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis",
+      "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal",
+      "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia",
+      "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+      "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
+      "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
+      "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+    ];
+
+    // Get the dropdown element
+    var dropdown = document.getElementById("origin_country");
+
+    // Populate the dropdown with country options
+    countries.forEach(function(origin_country) {
+      var option = document.createElement("option");
+      option.text = origin_country;
+      dropdown.add(option);
+
+      var countryCodes = countries.map(function(country) {
+    return country.substring(0, 3).toUpperCase();
+    console.log(countryCodes);
+});
+    });
+  </script>
+
+<script>
+    // Array of states in Nigeria
+    var states = [
+      "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi",
+      "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos",
+      "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara"
+    ];
+
+    // Get the dropdown element
+    var dropdown = document.getElementById("origin_state");
+
+    // Populate the dropdown with state options
+    states.forEach(function(origin_state) {
+      var option = document.createElement("option");
+      option.text = origin_state;
+      dropdown.add(option);
+    });
+  </script>
+
+<script>
+    // Array of Local Government Areas in Nigeria
+    var lgas = [
+    "Abeokuta North", "Abeokuta South", "Ado-Odo/Ota", "Afijio", "Akoko North-East", "Akoko North-West", "Akoko South-East",
+    "Akoko South-West", "Akure North", "Akure South", "Akwanga", "Alimosho", "Ajeromi-Ifelodun", "Amuwo-Odofin", "Aninri",
+    "Aniocha North", "Aniocha South", "Apapa", "Awe", "Awgu", "Ayamelum", "Aiyedaade", "Aiyedire", "Barkin Ladi", "Bauchi",
+    "Bekwarra", "Bende", "Bida", "Birnin Gwari", "Bogoro", "Bomadi", "Bonny", "Borgu", "Bosso", "Brass", "Bungudu", "Bunkure",
+    "Buruku", "Burutu", "Chanchaga", "Charanchi", "Chibok", "Chikun", "Dala", "Damasak", "Damban", "Darazo", "Dass", "Daura",
+    "Dawakin Kudu", "Dawakin Tofa", "Degema", "Dekina", "Demsa", "Dikwa", "Doguwa", "Doma", "Dukku", "Dunukofia", "Dutse",
+    "Ede North", "Ede South", "Egbeda", "Egbedore", "Egor", "Ehime Mbano", "Ejigbo", "Ekeremor", "Ekiti East", "Ekiti South-West",
+    "Ekiti West", "Ekwusigo", "Eleme", "Emohua", "Emuoha", "Enugu East", "Enugu North", "Enugu South", "Epe", "Esan Central",
+    "Esan North-East", "Esan South-East", "Esan West", "Essien Udim", "Ethiope East", "Ethiope West", "Eti-Osa", "Etinan", "Etung",
+    "Ewekoro", "Ezeagu", "Ezinihitte", "Ezza North", "Ezza South", "Fagge", "Fakai", "Faskari", "Fika", "Fufure", "Funakaye",
+    "Gbako", "Gboko", "Gada", "Gagarawa", "Ganye", "Garki", "Garko", "Garun Mallam", "Gashaka", "Gaya", "Gbonyin", "Gboko",
+    "Geregu", "Giade", "Giwa", "Gokana", "Gombe", "Goronyo", "Gubio", "Gudu", "Gulani", "Guma", "Gumel", "Gummi", "Guri", "Gusau",
+    "Gwadabawa", "Gwagwalada", "Gwale", "Gwarzo", "Gwiwa", "Gwoza", "Hadejia", "Hawul", "Hong", "Ibadan North", "Ibadan North-East",
+    "Ibadan North-West", "Ibadan South-East", "Ibadan South-West", "Ibeju-Lekki", "Ibeno", "Ibesikpo Asutan", "Ibi", "Ibiono-Ibom", "Ife Central", "Ife East", "Ife North", "Ife South", "Ifedayo",
+    "Ifedore", "Igabi", "Igalamela-Odolu", "Igbo Etiti", "Igbo Eze North", "Igbo Eze South", "Igueben", "Ihiala",
+    "Ihitte/Uboma", "Ijebu East", "Ijebu North", "Ijebu North East", "Ijebu Ode", "Ijero", "Ijumu", "Ika", "Ika North East",
+    "Ika South", "Ikara", "Ikeduru", "Ikeja", "Ikenne", "Ikere", "Ikole", "Ikono", "Ikot Abasi", "Ikot Ekpene", "Ikpoba-Okha",
+    "Ikpoba-Okha", "Ikwuano", "Ikwerre", "Ikwo", "Ila", "Ilejemeje", "Ilejemeje", "Ilesa East", "Ilesa West", "Illela",
+    "Ilorin East", "Ilorin South", "Ilorin West", "Imeko Afon", "Ingawa", "Ini", "Ipokia", "Irele", "Irepo", "Irepodun",
+    "Irepodun", "Isa", "Isiala Mbano", "Isiala Ngwa North", "Isiala Ngwa South", "Isin", "Isi-Uzo", "Isoko North", "Isoko South",
+    "Iso-Oru", "Isokan", "Isu", "Isuikwuato", "Itas/Gadau", "Itesiwaju", "Itu", "Ivo", "Iwajowa", "Iwo", "Izzi", "Jaba", "Jada",
+    "Jahun", "Jakusko", "Jalingo", "Jama'a", "Jega", "Jere", "Jibia", "Jos East", "Jos North", "Jos South", "Kabba/Bunu",
+    "Kabo", "Kachia", "Kaduna North", "Kaduna South", "Kafin Hausa", "Kafur", "Kaga", "Kagarko", "Kaiama", "Kaita",
+    "Kajola", "Kajuru", "Kala/Balge", "Kalgo", "Kaltungo", "Kanam", "Kankara", "Kanke", "Kankia", "Kano Municipal",
+    "Karasuwa", "Karaye", "Karim Lamido", "Karu", "Katagum", "Katcha", "Katsina", "Kaugama", "Kaura", "Kauru", "Kazaure",
+    "Keana", "Keffi", "Khana", "Kibiya", "Kirfi", "Kiri Kasama", "Kiru", "Kiyawa", "Kogi", "Koko/Besse", "Kokona", "Kolokuma/Opokuma",
+    "Konduga", "Konshisha", "Kontagora", "Kosofe", "Kaugama", "Kubau", "Kudan", "Kuje", "Kukawa", "Kumbotso", "Kumi", "Kunchi", "Kura", "Kurfi", "Kusada", "Kwali",
+    "Kwande", "Kwami", "Kwara", "Kwesati", "Lafia", "Lafiagi", "Lagelu", "Langtang North", "Langtang South", "Lapai",
+    "Lau", "Lere", "Logo", "Machina", "Madagali", "Mafa", "Magama", "Magumeri", "Mai'Adua", "Maiha", "Maiyama",
+    "Makarfi", "Makoda", "Malam Madori", "Malumfashi", "Mangu", "Marte", "Maru", "Mashegu", "Mashi", "Matazu",
+    "Mayo-Belwa", "Mbaitoli", "Mbo", "Michika", "Miga", "Mikang", "Minjibir", "Misau", "Moba", "Mobbar", "Mubi North",
+    "Mubi South", "Mokwa", "Monguno", "Moriki", "Mubi South", "Musawa", "Mushin", "Nafada", "Nangere", "Nasarawa",
+    "Nasarawa Egon", "Ndokwa East", "Ndokwa West", "Nembe", "Ngala", "Nganzai", "Ngaski", "Nguru", "Ngor Okpala",
+    "Njaba", "Njikoka", "Nkanu East", "Nkanu West", "Nkwerre", "Nnewi North", "Nnewi South", "Nsit Atai", "Nsit Ibom",
+    "Nsit Ubium", "Nsukka", "Numan", "Nwangele", "Obafemi Owode", "Obanliku", "Obi", "Obi", "Obi Ngwa", "Obio/Akpor",
+    "Obokun", "Obot Akara", "Obowo", "Obubra", "Obudu", "Odeda", "Odo Otin", "Odogbolu", "Odukpani", "Offa",
+    "Ofu", "Ogba/Egbema/Ndoni", "Ogbadibo", "Ogbaru", "Ogbia", "Ogbomoso North", "Ogbomoso South", "Ogu/Bolo",
+    "Ogoja", "Ogori/Magongo", "Ogun Waterside", "Oguta", "Oguzor/Udu", "Ohafia", "Ohaji/Egbema", "Ohaozara",
+    "Ohaukwu", "Ohimini", "Orhionmwon", "Oji River", "Ojokoro", "Okehi", "Okene", "Oke Ero", "Okigwe", "Okitipupa",
+    "Okobo", "Okpokwu", "Okrika", "Olamaboro", "Oluyole", "Ona Ara", "Ondo East", "Ondo West", "Onicha", "Onitsha North",
+    "Onitsha South", "Onna", "Okoyong", "Opobo/Nkoro", "Orhionmwon", "Orile-Oko", "Orlu", "Orolu", "Oron", "Orsu", "Oru East", "Oru West", "Oruk Anam",
+    "Orumba North", "Orumba South", "Oru West", "Oruk Anam", "Oshimili North", "Oshimili South", "Oshodi-Isolo",
+    "Osisioma Ngwa", "Osogbo", "Oturkpo", "Ovia North-East", "Ovia South-West", "Owan East", "Owan West", "Owerri Municipal",
+    "Owerri North", "Owerri West", "Owo", "Oye", "Oyi", "Oyigbo", "Oyo East", "Oyo West", "Oyun", "Paikoro", "Pankshin",
+    "Patani", "Pategi", "Port Harcourt", "Potiskum", "Qua'an Pan", "Rabah", "Rafi", "Rano", "Remo North", "Rijau", "Rimi",
+    "Riyom", "Rogo", "Roni", "Sabon Birni", "Sabon Gari", "Sabuwa", "Safana", "Sagbama", "Sakaba", "Saki East", "Saki West",
+    "Sandamu", "Sanga", "Sapele", "Sardauna", "Shagamu", "Shagari", "Shanga", "Shani", "Shanono", "Shelleng", "Shendam",
+    "Shinkafi", "Shira", "Shiroro", "Shongom", "Shomolu", "Silame", "Soba", "Sokoto North", "Sokoto South", "Song",
+    "Southern Ijaw", "Suleja", "Sule Tankarkar", "Sumaila", "Suru", "Surulere", "Surulere", "Tafa", "Tafawa Balewa",
+    "Takai", "Takum", "Talata Mafara", "Tambuwal", "Tangaza", "Tarauni", "Tarka", "Tarmuwa", "Taura", "Tofa", "Toro",
+    "Toto", "Toungo", "Udenu", "Udi", "Udu", "Udu", "Ughelli North", "Ughelli South", "Ugwunagbo", "Uhunmwonde", "Ukanafun",
+    "Ukum", "Ukwuani", "Umuahia North", "Umuahia South", "Ungogo", "Unguwar Dosa", "Unuimo", "Uruan", "Ururo", "Usasa",
+    "Usmanu Danfodiyo", "Ussa", "Uvwie", "Uyo", "Uzo Uwani", "Vandeikya", "Wamako", "Warawa", "Warji", "Warri North",
+    "Warri South", "Warri South-West", "Wasagu/Danko", "Wase", "Wudil", "Wukari", "Wurno", "Wushishi", "Yabo",
+    "Yagba East", "Yagba West", "Yakuur", "Yala", "Yamaltu/Deba", "Yankwashi", "Yauri", "Yenagoa", "Yola North", "Yola South", "Yorro", "Yunusari",
+    "Yusufari", "Zaki", "Zango", "Zangon Kataf", "Zaria", "Zing", "Zomo", "Zubairu", "Zuru"
+
+
+
+
+
+    ];
+
+    // Get the dropdown element
+    var dropdown = document.getElementById("origin_lga");
+
+    // Populate the dropdown with local government area options
+    lgas.forEach(function(origin_lga) {
+      var option = document.createElement("option");
+      option.text = origin_lga;
+      dropdown.add(option);
+    });
+  </script>
+
+
+<script>
+    // Array of Local Government Areas in Nigeria
+    var posting_lga = [
+    "Abeokuta North", "Abeokuta South", "Ado-Odo/Ota", "Afijio", "Akoko North-East", "Akoko North-West", "Akoko South-East",
+    "Akoko South-West", "Akure North", "Akure South", "Akwanga", "Alimosho", "Ajeromi-Ifelodun", "Amuwo-Odofin", "Aninri",
+    "Aniocha North", "Aniocha South", "Apapa", "Awe", "Awgu", "Ayamelum", "Aiyedaade", "Aiyedire", "Barkin Ladi", "Bauchi",
+    "Bekwarra", "Bende", "Bida", "Birnin Gwari", "Bogoro", "Bomadi", "Bonny", "Borgu", "Bosso", "Brass", "Bungudu", "Bunkure",
+    "Buruku", "Burutu", "Chanchaga", "Charanchi", "Chibok", "Chikun", "Dala", "Damasak", "Damban", "Darazo", "Dass", "Daura",
+    "Dawakin Kudu", "Dawakin Tofa", "Degema", "Dekina", "Demsa", "Dikwa", "Doguwa", "Doma", "Dukku", "Dunukofia", "Dutse",
+    "Ede North", "Ede South", "Egbeda", "Egbedore", "Egor", "Ehime Mbano", "Ejigbo", "Ekeremor", "Ekiti East", "Ekiti South-West",
+    "Ekiti West", "Ekwusigo", "Eleme", "Emohua", "Emuoha", "Enugu East", "Enugu North", "Enugu South", "Epe", "Esan Central",
+    "Esan North-East", "Esan South-East", "Esan West", "Essien Udim", "Ethiope East", "Ethiope West", "Eti-Osa", "Etinan", "Etung",
+    "Ewekoro", "Ezeagu", "Ezinihitte", "Ezza North", "Ezza South", "Fagge", "Fakai", "Faskari", "Fika", "Fufure", "Funakaye",
+    "Gbako", "Gboko", "Gada", "Gagarawa", "Ganye", "Garki", "Garko", "Garun Mallam", "Gashaka", "Gaya", "Gbonyin", "Gboko",
+    "Geregu", "Giade", "Giwa", "Gokana", "Gombe", "Goronyo", "Gubio", "Gudu", "Gulani", "Guma", "Gumel", "Gummi", "Guri", "Gusau",
+    "Gwadabawa", "Gwagwalada", "Gwale", "Gwarzo", "Gwiwa", "Gwoza", "Hadejia", "Hawul", "Hong", "Ibadan North", "Ibadan North-East",
+    "Ibadan North-West", "Ibadan South-East", "Ibadan South-West", "Ibeju-Lekki", "Ibeno", "Ibesikpo Asutan", "Ibi", "Ibiono-Ibom", "Ife Central", "Ife East", "Ife North", "Ife South", "Ifedayo",
+    "Ifedore", "Igabi", "Igalamela-Odolu", "Igbo Etiti", "Igbo Eze North", "Igbo Eze South", "Igueben", "Ihiala",
+    "Ihitte/Uboma", "Ijebu East", "Ijebu North", "Ijebu North East", "Ijebu Ode", "Ijero", "Ijumu", "Ika", "Ika North East",
+    "Ika South", "Ikara", "Ikeduru", "Ikeja", "Ikenne", "Ikere", "Ikole", "Ikono", "Ikot Abasi", "Ikot Ekpene", "Ikpoba-Okha",
+    "Ikpoba-Okha", "Ikwuano", "Ikwerre", "Ikwo", "Ila", "Ilejemeje", "Ilejemeje", "Ilesa East", "Ilesa West", "Illela",
+    "Ilorin East", "Ilorin South", "Ilorin West", "Imeko Afon", "Ingawa", "Ini", "Ipokia", "Irele", "Irepo", "Irepodun",
+    "Irepodun", "Isa", "Isiala Mbano", "Isiala Ngwa North", "Isiala Ngwa South", "Isin", "Isi-Uzo", "Isoko North", "Isoko South",
+    "Iso-Oru", "Isokan", "Isu", "Isuikwuato", "Itas/Gadau", "Itesiwaju", "Itu", "Ivo", "Iwajowa", "Iwo", "Izzi", "Jaba", "Jada",
+    "Jahun", "Jakusko", "Jalingo", "Jama'a", "Jega", "Jere", "Jibia", "Jos East", "Jos North", "Jos South", "Kabba/Bunu",
+    "Kabo", "Kachia", "Kaduna North", "Kaduna South", "Kafin Hausa", "Kafur", "Kaga", "Kagarko", "Kaiama", "Kaita",
+    "Kajola", "Kajuru", "Kala/Balge", "Kalgo", "Kaltungo", "Kanam", "Kankara", "Kanke", "Kankia", "Kano Municipal",
+    "Karasuwa", "Karaye", "Karim Lamido", "Karu", "Katagum", "Katcha", "Katsina", "Kaugama", "Kaura", "Kauru", "Kazaure",
+    "Keana", "Keffi", "Khana", "Kibiya", "Kirfi", "Kiri Kasama", "Kiru", "Kiyawa", "Kogi", "Koko/Besse", "Kokona", "Kolokuma/Opokuma",
+    "Konduga", "Konshisha", "Kontagora", "Kosofe", "Kaugama", "Kubau", "Kudan", "Kuje", "Kukawa", "Kumbotso", "Kumi", "Kunchi", "Kura", "Kurfi", "Kusada", "Kwali",
+    "Kwande", "Kwami", "Kwara", "Kwesati", "Lafia", "Lafiagi", "Lagelu", "Langtang North", "Langtang South", "Lapai",
+    "Lau", "Lere", "Logo", "Machina", "Madagali", "Mafa", "Magama", "Magumeri", "Mai'Adua", "Maiha", "Maiyama",
+    "Makarfi", "Makoda", "Malam Madori", "Malumfashi", "Mangu", "Marte", "Maru", "Mashegu", "Mashi", "Matazu",
+    "Mayo-Belwa", "Mbaitoli", "Mbo", "Michika", "Miga", "Mikang", "Minjibir", "Misau", "Moba", "Mobbar", "Mubi North",
+    "Mubi South", "Mokwa", "Monguno", "Moriki", "Mubi South", "Musawa", "Mushin", "Nafada", "Nangere", "Nasarawa",
+    "Nasarawa Egon", "Ndokwa East", "Ndokwa West", "Nembe", "Ngala", "Nganzai", "Ngaski", "Nguru", "Ngor Okpala",
+    "Njaba", "Njikoka", "Nkanu East", "Nkanu West", "Nkwerre", "Nnewi North", "Nnewi South", "Nsit Atai", "Nsit Ibom",
+    "Nsit Ubium", "Nsukka", "Numan", "Nwangele", "Obafemi Owode", "Obanliku", "Obi", "Obi", "Obi Ngwa", "Obio/Akpor",
+    "Obokun", "Obot Akara", "Obowo", "Obubra", "Obudu", "Odeda", "Odo Otin", "Odogbolu", "Odukpani", "Offa",
+    "Ofu", "Ogba/Egbema/Ndoni", "Ogbadibo", "Ogbaru", "Ogbia", "Ogbomoso North", "Ogbomoso South", "Ogu/Bolo",
+    "Ogoja", "Ogori/Magongo", "Ogun Waterside", "Oguta", "Oguzor/Udu", "Ohafia", "Ohaji/Egbema", "Ohaozara",
+    "Ohaukwu", "Ohimini", "Orhionmwon", "Oji River", "Ojokoro", "Okehi", "Okene", "Oke Ero", "Okigwe", "Okitipupa",
+    "Okobo", "Okpokwu", "Okrika", "Olamaboro", "Oluyole", "Ona Ara", "Ondo East", "Ondo West", "Onicha", "Onitsha North",
+    "Onitsha South", "Onna", "Okoyong", "Opobo/Nkoro", "Orhionmwon", "Orile-Oko", "Orlu", "Orolu", "Oron", "Orsu", "Oru East", "Oru West", "Oruk Anam",
+    "Orumba North", "Orumba South", "Oru West", "Oruk Anam", "Oshimili North", "Oshimili South", "Oshodi-Isolo",
+    "Osisioma Ngwa", "Osogbo", "Oturkpo", "Ovia North-East", "Ovia South-West", "Owan East", "Owan West", "Owerri Municipal",
+    "Owerri North", "Owerri West", "Owo", "Oye", "Oyi", "Oyigbo", "Oyo East", "Oyo West", "Oyun", "Paikoro", "Pankshin",
+    "Patani", "Pategi", "Port Harcourt", "Potiskum", "Qua'an Pan", "Rabah", "Rafi", "Rano", "Remo North", "Rijau", "Rimi",
+    "Riyom", "Rogo", "Roni", "Sabon Birni", "Sabon Gari", "Sabuwa", "Safana", "Sagbama", "Sakaba", "Saki East", "Saki West",
+    "Sandamu", "Sanga", "Sapele", "Sardauna", "Shagamu", "Shagari", "Shanga", "Shani", "Shanono", "Shelleng", "Shendam",
+    "Shinkafi", "Shira", "Shiroro", "Shongom", "Shomolu", "Silame", "Soba", "Sokoto North", "Sokoto South", "Song",
+    "Southern Ijaw", "Suleja", "Sule Tankarkar", "Sumaila", "Suru", "Surulere", "Surulere", "Tafa", "Tafawa Balewa",
+    "Takai", "Takum", "Talata Mafara", "Tambuwal", "Tangaza", "Tarauni", "Tarka", "Tarmuwa", "Taura", "Tofa", "Toro",
+    "Toto", "Toungo", "Udenu", "Udi", "Udu", "Udu", "Ughelli North", "Ughelli South", "Ugwunagbo", "Uhunmwonde", "Ukanafun",
+    "Ukum", "Ukwuani", "Umuahia North", "Umuahia South", "Ungogo", "Unguwar Dosa", "Unuimo", "Uruan", "Ururo", "Usasa",
+    "Usmanu Danfodiyo", "Ussa", "Uvwie", "Uyo", "Uzo Uwani", "Vandeikya", "Wamako", "Warawa", "Warji", "Warri North",
+    "Warri South", "Warri South-West", "Wasagu/Danko", "Wase", "Wudil", "Wukari", "Wurno", "Wushishi", "Yabo",
+    "Yagba East", "Yagba West", "Yakuur", "Yala", "Yamaltu/Deba", "Yankwashi", "Yauri", "Yenagoa", "Yola North", "Yola South", "Yorro", "Yunusari",
+    "Yusufari", "Zaki", "Zango", "Zangon Kataf", "Zaria", "Zing", "Zomo", "Zubairu", "Zuru"
+
+
+
+
+
+    ];
+
+    // Get the dropdown element
+    var dropdown = document.getElementById("posting_lga");
+
+    // Populate the dropdown with local government area options
+    posting_lga.forEach(function(posting_lga) {
+      var option = document.createElement("option");
+      option.text = posting_lga;
+      dropdown.add(option);
+    });
+  </script>
+
+<script>
+    // Array of states in Nigeria
+    var states = [
+    "Afghan",
+  "Albanian",
+  "Algerian",
+  "American",
+  "Andorran",
+  "Angolan",
+  "Argentine",
+  "Armenian",
+  "Australian",
+  "Austrian",
+  "Azerbaijani",
+  "Bahamian",
+  "Bahraini",
+  "Bangladeshi",
+  "Barbadian",
+  "Belarusian",
+  "Belgian",
+  "Belizean",
+  "Beninese",
+  "Bhutanese",
+  "Bolivian",
+  "Bosnian",
+  "Brazilian",
+  "British",
+  "Bruneian",
+  "Bulgarian",
+  "Burkinabe",
+  "Burmese",
+  "Burundian",
+  "Cambodian",
+  "Cameroonian",
+  "Canadian",
+  "Cape Verdean",
+  "Central African",
+  "Chadian",
+  "Chilean",
+  "Chinese",
+  "Colombian",
+  "Comorian",
+  "Congolese (Democratic Republic of the Congo)",
+  "Congolese (Republic of the Congo)",
+  "Costa Rican",
+  "Croatian",
+  "Cuban",
+  "Cypriot",
+  "Czech",
+  "Danish",
+  "Djiboutian",
+  "Dominican",
+  "Dutch",
+  "East Timorese",
+  "Ecuadorian",
+  "Egyptian",
+  "Emirati",
+  "Equatorial Guinean",
+  "Eritrean",
+  "Estonian",
+  "Ethiopian",
+  "Fijian",
+  "Filipino",
+  "Finnish",
+  "French",
+  "Gabonese",
+  "Gambian",
+  "Georgian",
+  "German",
+  "Ghanaian",
+  "Greek",
+  "Grenadian",
+  "Guatemalan",
+  "Guinean",
+  "Guyanese",
+  "Haitian",
+  "Honduran",
+  "Hungarian",
+  "Icelandic",
+  "Indian",
+  "Indonesian",
+  "Iranian",
+  "Iraqi",
+  "Irish",
+  "Israeli",
+  "Italian",
+  "Ivorian",
+  "Jamaican",
+  "Japanese",
+  "Jordanian",
+  "Kazakhstani",
+  "Kenyan",
+  "Kiribati",
+  "Korean",
+  "Kosovar",
+  "Kuwaiti",
+  "Kyrgyz",
+  "Laotian",
+  "Latvian",
+  "Lebanese",
+  "Liberian",
+  "Libyan",
+  "Lithuanian",
+  "Luxembourgish",
+  "Macedonian",
+  "Malagasy",
+  "Malawian",
+  "Malaysian",
+  "Maldivian",
+  "Malian",
+  "Maltese",
+  "Marshallese",
+  "Mauritanian",
+  "Mauritian",
+  "Mexican",
+  "Micronesian",
+  "Moldovan",
+  "Monacan",
+  "Mongolian",
+  "Montenegrin",
+  "Moroccan",
+  "Mosotho",
+  "Motswana",
+  "Mozambican",
+  "Namibian",
+  "Nauruan",
+  "Nepalese",
+  "New Zealander",
+  "Nicaraguan",
+  "Nigerian",
+  "Nigerien",
+  "North Korean",
+  "Northern Irish",
+  "Norwegian",
+  "Omani",
+  "Pakistani",
+  "Palauan",
+  "Panamanian",
+  "Papua New Guinean",
+  "Paraguayan",
+  "Peruvian",
+  "Polish",
+  "Portuguese",
+  "Qatari",
+  "Romanian",
+  "Russian",
+  "Rwandan",
+  "Saint Lucian",
+  "Salvadoran",
+  "Samoan",
+  "San Marinese",
+  "Sao Tomean",
+  "Saudi",
+  "Scottish",
+  "Senegalese",
+  "Serbian",
+  "Seychellois",
+  "Sierra Leonean",
+  "Singaporean",
+  "Slovak",
+  "Slovenian",
+  "Solomon Islander",
+  "Somali",
+  "South African",
+  "South Korean",
+  "South Sudanese",
+  "Spanish",
+  "Sri Lankan",
+  "Sudanese",
+  "Surinamese",
+  "Swazi",
+  "Swedish",
+  "Swiss",
+  "Syrian",
+  "Taiwanese",
+  "Tajik",
+  "Tanzanian",
+  "Thai",
+  "Togolese",
+  "Tongan",
+  "Trinidadian or Tobagonian",
+  "Tunisian",
+  "Turkish",
+  "Turkmen",
+  "Tuvaluan",
+  "Ugandan",
+  "Ukrainian",
+  "Uruguayan",
+  "Uzbekistani",
+  "Venezuelan",
+  "Vietnamese",
+  "Welsh",
+  "Yemenite",
+  "Zambian",
+  "Zimbabwean"
+    ];
+
+    // Get the dropdown element
+    var dropdown = document.getElementById("nationality");
+
+    // Populate the dropdown with state options
+    states.forEach(function(nationality) {
+      var option = document.createElement("option");
+      option.text = nationality;
+      dropdown.add(option);
+    });
+  </script>
+
+<script>
+    // Function to add a new form row
+    function addFormRow() {
+      var container = document.getElementById("formContainer");
+      var row = document.createElement("div");
+      row.className = "form-group local-forms";
+      row.innerHTML = `
+      <form>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Payment Status </label>
+                                        <select class="form-control select" >
+                                            <option>Select Payment Status</option>
+                                            <option>Paid</option>
+                                            <option>Un Paid</option>
+                                            <option>Patially Paid</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >From </label>
+                                        <input class="form-control datetimepicker" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms cal-icon">
+                                        <label >To </label>
+                                        <input class="form-control datetimepicker" type="text"   >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4 ">
+                                    <div class="form-group local-forms">
+                                        <label >Payment Status </label>
+                                        <select class="form-control select">
+                                            <option>Select Payment Status</option>
+                                            <option>Paid</option>
+                                            <option>Un Paid</option>
+                                            <option>Patially Paid</option>
+                                          </select>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <button type="button" class="remove-row">Remove</button>
+                        </form>
+      `;
+      container.appendChild(row);
+    }
+
+    // Function to remove a form row
+    function removeFormRow(event) {
+      var row = event.target.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+
+<script>
+    // Add event listener to dynamically created "Remove" buttons
+    document.addEventListener("click", function(event) {
+      if (event.target.classList.contains("remove-row")) {
+        removeFormRow(event);
+      }
+    });
+  </script>
+
+
+ 
+
+
+</body>
+
+</html>
