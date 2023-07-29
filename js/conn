@@ -1,0 +1,8 @@
+fetch('https://example.com/api/data')
+  .then(response => response.json())
+  .then(data => {
+    // Do something with the data, like displaying it on the page
+  })
+  .catch(error => {
+    // Handle any errors
+  });
