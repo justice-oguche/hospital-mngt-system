@@ -2,4 +2,4 @@
 hospital/clinic management system
 
 click the link to preview
-- [ ] Hospitalmnt.000webhostapp.com
+- [ ] https://Hospitalmnt.000webhostapp.com
